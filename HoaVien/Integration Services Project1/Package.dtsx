@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{AAAD26CD-0672-4E15-844B-2A3A3390B423}">
+  DTS:VersionBuild="106"
+  DTS:VersionGUID="{128614AC-F601-4CDE-88E5-B5DBA6AF00B2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -489,7 +489,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="County"
-              DTS:DTSID="{B262A194-32A2-485D-9234-D5A64D632AB6}"
+              DTS:DTSID="{2F170848-E6D3-4AC3-B3FF-0AEE805387F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -498,7 +498,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CountyAscii"
-              DTS:DTSID="{10BE0971-C0A4-461F-87BC-EF8323120492}"
+              DTS:DTSID="{8323980D-3FD5-4994-8CB0-8FFB30BE9BFB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -507,25 +507,25 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CountyFull"
-              DTS:DTSID="{38890A36-3BEE-4561-BD9C-2DDB571010B1}"
+              DTS:DTSID="{4C184109-7AE0-4DAB-8B70-D0B3891A6428}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CountyFips"
-              DTS:DTSID="{3D2DAACA-28B0-4993-AA5F-EFB8C608165B}"
+              DTS:DTSID="{5FCD1958-9E30-43F4-8BB4-FBF814F7BD10}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="3"
+              DTS:MaximumWidth="10"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="StateId"
-              DTS:DTSID="{BA4D459E-84AC-4E94-9531-2169C5ADFBBD}"
+              DTS:DTSID="{DE33AD6D-89BC-42C8-9ACD-D5E673472F45}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -534,32 +534,34 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="StateName"
-              DTS:DTSID="{53264722-2AFC-4FDA-B18F-2C031F6DD135}"
+              DTS:DTSID="{45EE9FB2-0273-42BC-BBC0-54FD2AAF56C0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="4"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Lat"
-              DTS:DTSID="{7B506421-A3CE-452D-AFBA-B799280C22D0}"
+              DTS:DTSID="{BCEF5E3F-8CE9-4916-9331-F133F1CBF566}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="4"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Long"
-              DTS:DTSID="{623E572E-8C9B-4187-BFA9-E84A1E9E0DE9}"
+              DTS:DTSID="{7CB30751-26FC-4EF2-BEFB-058940610F69}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Population"
-              DTS:DTSID="{AC612B45-36C1-4FAE-B185-FE54E11EDEE4}"
+              DTS:DTSID="{D27A8B14-DB54-4498-9EF0-A1C02A0467F6}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -588,7 +590,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="StateName"
-              DTS:DTSID="{34CD3662-E2BD-423C-980C-9530F922C57F}"
+              DTS:DTSID="{C1D1C580-BFCD-4C64-9FAF-DEF46743E031}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -597,7 +599,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CountyName"
-              DTS:DTSID="{E9522B24-5548-45BC-A92E-C8482A7E6C5F}"
+              DTS:DTSID="{D12E13A3-3650-4B69-9B45-1BF9FB7AF27B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -606,7 +608,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="StateCode"
-              DTS:DTSID="{EE50EB56-C17E-436C-9921-9EA82DD57597}"
+              DTS:DTSID="{84AB01B8-2008-4111-AFCE-85967D416DDB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -615,7 +617,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="CountyCode"
-              DTS:DTSID="{AA932C04-575D-4932-9376-AEF56715CD46}"
+              DTS:DTSID="{FE608676-6BB7-4F42-867D-4DF63D12ACFE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -623,7 +625,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="DateDate"
-              DTS:DTSID="{77799D47-DD7A-439F-AFEF-7D70E1411E1C}"
+              DTS:DTSID="{86FCE5E5-720A-4A4A-AE7E-9537B2D89093}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -632,16 +634,16 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="AQI"
-              DTS:DTSID="{12D07A0C-D5A7-480F-9E10-8F95D7F1DD68}"
+              DTS:DTSID="{D5BB99FC-B8EA-4BFF-A77E-5CDB49350E9C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="100"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{BCB5983E-39D9-42CA-8132-E3C6FC8B583C}"
+              DTS:DTSID="{0ED17A81-A7F5-47B6-A46D-60230DB17BB8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -650,7 +652,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DefiningParameter"
-              DTS:DTSID="{8507BB97-0AA2-47D4-B273-F37C8A6A080E}"
+              DTS:DTSID="{2C2C2F97-1C00-4EBE-A983-7818C5501865}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -659,7 +661,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DefiningSite"
-              DTS:DTSID="{90DE152D-C13B-4A33-A26B-EE9212BBBCED}"
+              DTS:DTSID="{6468376F-848C-4B7F-A18D-5EECBE65D203}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -668,7 +670,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Sites Reporting"
-              DTS:DTSID="{1DD6320C-C0D0-47BF-8A10-57F5C24AF6D2}"
+              DTS:DTSID="{A909E15B-842D-487D-B09E-F144BBB49ABD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -676,7 +678,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="Created"
-              DTS:DTSID="{13A4E7BB-9B06-46F2-BBC5-C2020E7B9497}"
+              DTS:DTSID="{424AAECB-591E-4163-A1FC-E87C18E85E6D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -684,7 +686,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="Last Updated"
-              DTS:DTSID="{EFFCC7B3-47B7-403C-BC74-4EE611C26166}"
+              DTS:DTSID="{CDDFDC46-BB00-46D8-A5E0-37FFA2196DB6}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -713,7 +715,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="StateName"
-              DTS:DTSID="{21A21F80-EAF2-498F-B7C1-40401620FB34}"
+              DTS:DTSID="{B2543156-BE85-4DE5-9D1F-50BF4B47B07B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -722,7 +724,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CountyName"
-              DTS:DTSID="{DBBF5181-FCD5-42E5-8455-80BDA3AAD074}"
+              DTS:DTSID="{05A29D91-BC9A-4D21-B160-CBD9791EDB99}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -731,15 +733,16 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="StateCode"
-              DTS:DTSID="{F6118688-A593-41A7-9C2C-0BC94FC78CCF}"
+              DTS:DTSID="{2127CE76-EEB1-47AE-B85D-97EF5E746BBC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="301"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="CountyCode"
-              DTS:DTSID="{B6D7AD98-33D9-4E7A-AFA5-905FF4AA4F67}"
+              DTS:DTSID="{F942E03F-EABE-413F-916F-47606F0F38F0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -747,7 +750,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="DateDate"
-              DTS:DTSID="{2F6AAD2C-7EC8-4FFF-AB70-35F16687BAEA}"
+              DTS:DTSID="{1E9A694B-ECE2-4D7C-862C-55265D7DD531}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -756,16 +759,16 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="AQI"
-              DTS:DTSID="{AB24D9C0-D938-4487-8F4A-A8B2777A1741}"
+              DTS:DTSID="{6E6D7240-7C3B-4F96-8306-83D3DFEFF44D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="100"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Category"
-              DTS:DTSID="{FB4930C1-2C6C-46F9-9B33-99C6C3FD6B93}"
+              DTS:DTSID="{38E152D7-5549-4FA8-B2CD-F6921498B3CF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -774,7 +777,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DefiningParameter"
-              DTS:DTSID="{0D57C9E3-7FA5-4D6E-A054-28D5845A6944}"
+              DTS:DTSID="{0A2E2612-805D-44D0-927A-6A863DE417F4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -783,7 +786,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="DefiningSite"
-              DTS:DTSID="{15BACAA9-0BD6-4E87-BD48-E58172C8A0F2}"
+              DTS:DTSID="{6A85A4D6-C769-42A9-BE17-C5C8463A5B10}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -792,7 +795,7 @@
               DTS:DataPrecision="18"
               DTS:TextQualified="True"
               DTS:ObjectName="NumberOfSitesReporting"
-              DTS:DTSID="{9B7F23B9-7B1D-442F-9135-967CE4E4D0E2}"
+              DTS:DTSID="{61AEC640-D5DD-4AF8-95E9-EAD35662744A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -800,7 +803,7 @@
               DTS:DataType="134"
               DTS:TextQualified="True"
               DTS:ObjectName="Created"
-              DTS:DTSID="{B91DA1D8-30F6-43B8-9D4B-8EF5F0275883}"
+              DTS:DTSID="{AEA4FA4D-D153-4A14-A6DC-4EB8DA977ADE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -808,7 +811,132 @@
               DTS:DataType="134"
               DTS:TextQualified="True"
               DTS:ObjectName="LastUpdated"
-              DTS:DTSID="{CD887154-3D63-40CB-91BC-E89D02AD2B8F}"
+              DTS:DTSID="{3468BEEB-7BA3-4241-955D-E9544DF0EAEA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 6]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7A7F9EC4-12D3-4A0E-846D-F3FBD85CD900}"
+      DTS:ObjectName="Flat File Connection Manager 6">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="4105"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\study 7\BI\Thuc_hanh\Yeu_cau\Air_Quality_Data\10_state_aqi_2021.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StateName"
+              DTS:DTSID="{D4CA773E-A085-4263-A66D-61659D50FFD3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CountyName"
+              DTS:DTSID="{F664E831-4EAA-4ADC-BBDE-C490167C5037}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{103BCD58-1481-4CA6-90CF-0895461324EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CountyCode"
+              DTS:DTSID="{EE73F701-E3BE-4DF3-8EBC-FE87DA173D3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateDate"
+              DTS:DTSID="{4FE16107-59E8-464C-A4E3-CE1FFBAAA3AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{FE5C6B18-7C9E-4C1D-981A-D398615B60C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{1AC3FA9F-2CF5-45D0-820F-B0F67E0B83C5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DefiningParameter"
+              DTS:DTSID="{9DDF0999-E0BE-46F3-A7D3-4032F49A92E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DefiningSite"
+              DTS:DTSID="{BEAEABA6-1750-4212-9DC2-9A6773DC5E70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NumberOfSites Reporting"
+              DTS:DTSID="{695CFEF1-BDE0-4DD1-B89D-BAE892D3E2CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{BBFF553A-517D-4280-918A-4376385DA42F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastUpdated"
+              DTS:DTSID="{268F81C5-5593-420B-8970-ABFBF5BC9B94}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -865,8 +993,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 6]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 6]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -902,7 +1030,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
-                      length="20"
+                      length="100"
                       lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
                       name="Category"
                       truncationRowDisposition="FailComponent">
@@ -969,27 +1097,6 @@
                       length="50"
                       lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[CountyName]"
                       name="CountyName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[StateCode]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateCode]"
-                      lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[StateCode]"
-                      name="StateCode"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1088,27 +1195,6 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[NumberOfSitesReporting]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NumberOfSitesReporting]"
-                      lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[NumberOfSitesReporting]"
-                      name="NumberOfSitesReporting"
-                      precision="18"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[LastUpdated]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
@@ -1128,20 +1214,61 @@
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[State Code]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[State Code]"
+                      name="State Code"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[NumberOfSites Reporting]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NumberOfSites Reporting]"
+                      lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[NumberOfSites Reporting]"
+                      name="NumberOfSites Reporting"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AQI]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="AQI" />
+                      dataType="numeric"
+                      name="AQI"
+                      precision="18" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="100"
                       name="Category" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Created]"
@@ -1159,11 +1286,6 @@
                       dataType="str"
                       length="50"
                       name="CountyName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateCode]"
-                      dataType="numeric"
-                      name="StateCode"
-                      precision="18" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CountyCode]"
                       dataType="numeric"
@@ -1186,14 +1308,19 @@
                       length="20"
                       name="DefiningSite" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NumberOfSitesReporting]"
-                      dataType="numeric"
-                      name="NumberOfSitesReporting"
-                      precision="18" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LastUpdated]"
                       dataType="dbTimeStamp"
                       name="LastUpdated" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                      dataType="numeric"
+                      name="State Code"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NumberOfSites Reporting]"
+                      dataType="numeric"
+                      name="NumberOfSites Reporting"
+                      precision="18" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1263,7 +1390,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -1275,7 +1402,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -1308,7 +1435,7 @@
                       refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="20"
+                      cachedLength="100"
                       cachedName="Category"
                       externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
                       lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[Category]" />
@@ -1334,13 +1461,6 @@
                       cachedName="CountyName"
                       externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyName]"
                       lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[CountyName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StateCode]"
-                      cachedDataType="numeric"
-                      cachedName="StateCode"
-                      cachedPrecision="18"
-                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateCode]"
-                      lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[StateCode]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CountyCode]"
                       cachedDataType="numeric"
@@ -1371,18 +1491,25 @@
                       externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DefiningSite]"
                       lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[DefiningSite]" />
                     <inputColumn
-                      refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NumberOfSitesReporting]"
-                      cachedDataType="numeric"
-                      cachedName="NumberOfSitesReporting"
-                      cachedPrecision="18"
-                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NumberOfSitesReporting]"
-                      lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[NumberOfSitesReporting]" />
-                    <inputColumn
                       refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LastUpdated]"
                       cachedDataType="dbTimeStamp"
                       cachedName="LastUpdated"
                       externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastUpdated]"
                       lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[LastUpdated]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NumberOfSites Reporting]"
+                      cachedDataType="numeric"
+                      cachedName="NumberOfSites Reporting"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NumberOfSitesReporting]"
+                      lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[NumberOfSites Reporting]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[State Code]"
+                      cachedDataType="numeric"
+                      cachedName="State Code"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateCode]"
+                      lineageId="Package\Data Flow Task 1\Flat File Source.Outputs[Flat File Source Output].Columns[State Code]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1418,7 +1545,7 @@
                       refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="100"
                       name="Category" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DefiningParameter]"
@@ -1472,6 +1599,340 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Data Flow Task 1\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stage_10_state_aqi_2021]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[StateName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StateName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[StateName]"
+                      name="StateName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CountyName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CountyName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CountyName]"
+                      name="CountyName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[StateCode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StateCode]"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[StateCode]"
+                      name="StateCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CountyCode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CountyCode]"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[CountyCode]"
+                      name="CountyCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DateDate]"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateDate]"
+                      name="DateDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[AQI]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AQI]"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[AQI]"
+                      name="AQI"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[DefiningParameter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DefiningParameter]"
+                      length="10"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[DefiningParameter]"
+                      name="DefiningParameter"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[DefiningSite]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DefiningSite]"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[DefiningSite]"
+                      name="DefiningSite"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumberOfSitesReporting]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NumberOfSitesReporting]"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumberOfSitesReporting]"
+                      name="NumberOfSitesReporting"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Created]"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[Created]"
+                      name="Created"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastUpdated]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LastUpdated]"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastUpdated]"
+                      name="LastUpdated"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StateName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StateName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CountyName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CountyName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StateCode]"
+                      dataType="i4"
+                      name="StateCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CountyCode]"
+                      dataType="i4"
+                      name="CountyCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DateDate]"
+                      dataType="dbDate"
+                      name="DateDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AQI]"
+                      dataType="i4"
+                      name="AQI" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DefiningParameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="DefiningParameter" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DefiningSite]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="DefiningSite" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NumberOfSitesReporting]"
+                      dataType="i4"
+                      name="NumberOfSitesReporting" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Created]"
+                      dataType="dbTimeStamp"
+                      name="Created" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LastUpdated]"
+                      dataType="dbTimeStamp"
+                      name="LastUpdated" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StateName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StateName]"
+                      name="StateName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CountyName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CountyName]"
+                      name="CountyName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StateCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StateCode]"
+                      name="StateCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CountyCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CountyCode]"
+                      name="CountyCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DateDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DateDate]"
+                      name="DateDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AQI]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AQI]"
+                      name="AQI" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DefiningParameter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DefiningParameter]"
+                      name="DefiningParameter" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DefiningSite]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DefiningSite]"
+                      name="DefiningSite" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NumberOfSitesReporting]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NumberOfSitesReporting]"
+                      name="NumberOfSitesReporting" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Created]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Created]"
+                      name="Created" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LastUpdated]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LastUpdated]"
+                      name="LastUpdated" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
@@ -1487,7 +1948,7 @@
       DTS:refId="Package\Data Flow Task 2"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task 2"
-      DTS:DTSID="{3D6DB613-CAEB-433D-B780-6B428026A60D}"
+      DTS:DTSID="{A234BB67-1644-4D39-B6D4-1E367976D1F4}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task 2"
@@ -1662,7 +2123,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
-                      length="50"
+                      length="100"
                       lineageId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
                       name="Category"
                       truncationRowDisposition="FailComponent">
@@ -1722,13 +2183,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[NumberOfSitesReporting]"
+                      refId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
-                      lineageId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[NumberOfSitesReporting]"
-                      name="NumberOfSitesReporting"
+                      lineageId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                      name="Number of Sites Reporting"
                       precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1763,13 +2224,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[LastUpdated]"
+                      refId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[Last Updated]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
-                      lineageId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[LastUpdated]"
-                      name="LastUpdated"
+                      lineageId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[Last Updated]"
+                      name="Last Updated"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1820,7 +2281,7 @@
                       refId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="100"
                       name="Category" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DefiningParameter]"
@@ -1997,7 +2458,7 @@
                       refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Category"
                       externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
                       lineageId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[Category]" />
@@ -2024,18 +2485,18 @@
                       externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Created]"
                       lineageId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[Created]" />
                     <inputColumn
-                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NumberOfSitesReporting]"
+                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Number of Sites Reporting]"
                       cachedDataType="numeric"
-                      cachedName="NumberOfSitesReporting"
+                      cachedName="Number of Sites Reporting"
                       cachedPrecision="18"
                       externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NumberOfSitesReporting]"
-                      lineageId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[NumberOfSitesReporting]" />
+                      lineageId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]" />
                     <inputColumn
-                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LastUpdated]"
+                      refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Last Updated]"
                       cachedDataType="dbTimeStamp"
-                      cachedName="LastUpdated"
+                      cachedName="Last Updated"
                       externalMetadataColumnId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LastUpdated]"
-                      lineageId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[LastUpdated]" />
+                      lineageId="Package\Data Flow Task 2\Flat File Source.Outputs[Flat File Source Output].Columns[Last Updated]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2071,7 +2532,7 @@
                       refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="100"
                       name="Category" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 2\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DefiningParameter]"
@@ -2140,7 +2601,7 @@
       DTS:refId="Package\Data Flow Task 3"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task 3"
-      DTS:DTSID="{4E88CADD-703C-4190-B7EE-B53F83320A3A}"
+      DTS:DTSID="{FF0D4DC9-8B08-4202-BBE3-3BA368F690F6}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task 3"
@@ -2248,12 +2709,13 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task 3\Flat File Source.Outputs[Flat File Source Output].Columns[CountyCode]"
-                      dataType="image"
+                      dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 3\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CountyCode]"
                       lineageId="Package\Data Flow Task 3\Flat File Source.Outputs[Flat File Source Output].Columns[CountyCode]"
                       name="CountyCode"
+                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2314,7 +2776,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 3\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
-                      length="50"
+                      length="100"
                       lineageId="Package\Data Flow Task 3\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
                       name="Category"
                       truncationRowDisposition="FailComponent">
@@ -2456,8 +2918,9 @@
                       precision="18" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 3\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CountyCode]"
-                      dataType="image"
-                      name="CountyCode" />
+                      dataType="numeric"
+                      name="CountyCode"
+                      precision="18" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 3\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DateDate]"
                       dataType="date"
@@ -2471,7 +2934,7 @@
                       refId="Package\Data Flow Task 3\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="100"
                       name="Category" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 3\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DefiningParameter]"
@@ -2626,8 +3089,9 @@
                       lineageId="Package\Data Flow Task 3\Flat File Source.Outputs[Flat File Source Output].Columns[StateCode]" />
                     <inputColumn
                       refId="Package\Data Flow Task 3\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CountyCode]"
-                      cachedDataType="image"
+                      cachedDataType="numeric"
                       cachedName="CountyCode"
+                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Data Flow Task 3\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyCode]"
                       lineageId="Package\Data Flow Task 3\Flat File Source.Outputs[Flat File Source Output].Columns[CountyCode]" />
                     <inputColumn
@@ -2647,7 +3111,7 @@
                       refId="Package\Data Flow Task 3\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="100"
                       cachedName="Category"
                       externalMetadataColumnId="Package\Data Flow Task 3\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
                       lineageId="Package\Data Flow Task 3\Flat File Source.Outputs[Flat File Source Output].Columns[Category]" />
@@ -2721,7 +3185,7 @@
                       refId="Package\Data Flow Task 3\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="100"
                       name="Category" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 3\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DefiningParameter]"
@@ -2790,7 +3254,7 @@
       DTS:refId="Package\Data Flow Task 4"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task 4"
-      DTS:DTSID="{59E0A0B8-F6C6-45C3-92E3-B974F88794E5}"
+      DTS:DTSID="{3EE9C151-4942-4E86-9012-3F7AE5A1004E}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task 4"
@@ -2800,6 +3264,171 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Data Flow Task 4\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 4\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Derived Column.Inputs[Derived Column Input].Columns[CountyFips]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="CountyFips"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[CountyFips]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)[REPLACE](#{Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Population]},"\"","")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)REPLACE(Population,"\"","")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Derived Column.Inputs[Derived Column Input].Columns[Lat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="Lat"
+                      lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Derived Column.Inputs[Derived Column Input].Columns[Long]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="Long"
+                      lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Long]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\Derived Column.Inputs[Derived Column Input].Columns[Population]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="Population"
+                      lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Population]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task 4\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Output].Columns[LatTransform]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Output].Columns[LatTransform]"
+                      name="LatTransform"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_R8)[REPLACE](#{Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]},"\"","")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_R8)REPLACE(Lat,"\"","")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Output].Columns[LongTransform]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Output].Columns[LongTransform]"
+                      name="LongTransform"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_R8)[REPLACE](#{Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Long]},"\"","")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_R8)REPLACE(Long,"\"","")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Output].Columns[PopulationTransform]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Output].Columns[PopulationTransform]"
+                      name="PopulationTransform"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)[REPLACE](#{Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Population]},"\"","")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)REPLACE(Population,"\"","")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task 4\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Data Flow Task 4\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
@@ -2899,13 +3528,14 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[CountyFips]"
-                      dataType="numeric"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CountyFips]"
+                      length="15"
                       lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[CountyFips]"
                       name="CountyFips"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2925,7 +3555,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateId]"
-                      length="3"
+                      length="10"
                       lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[StateId]"
                       name="StateId"
                       truncationRowDisposition="FailComponent">
@@ -2964,10 +3594,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]"
-                      dataType="r4"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Lat]"
+                      length="9"
                       lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]"
                       name="Lat"
                       truncationRowDisposition="FailComponent">
@@ -2984,10 +3616,12 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Long]"
-                      dataType="r4"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Long]"
+                      length="11"
                       lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Long]"
                       name="Long"
                       truncationRowDisposition="FailComponent">
@@ -3004,13 +3638,14 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Population]"
-                      dataType="numeric"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Population]"
+                      length="9"
                       lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Population]"
                       name="Population"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -3046,14 +3681,15 @@
                       name="CountyFull" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CountyFips]"
-                      dataType="numeric"
-                      name="CountyFips"
-                      precision="18" />
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="CountyFips" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateId]"
                       codePage="1252"
                       dataType="str"
-                      length="3"
+                      length="10"
                       name="StateId" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[StateName]"
@@ -3063,17 +3699,22 @@
                       name="StateName" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Lat]"
-                      dataType="r4"
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
                       name="Lat" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Long]"
-                      dataType="r4"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
                       name="Long" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Population]"
-                      dataType="numeric"
-                      name="Population"
-                      precision="18" />
+                      codePage="1252"
+                      dataType="str"
+                      length="9"
+                      name="Population" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3083,7 +3724,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1252"
+                      codePage="20284"
                       dataType="text"
                       description="Flat File Source Error Output Column"
                       lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
@@ -3143,7 +3784,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -3194,25 +3835,10 @@
                       externalMetadataColumnId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyAscii]"
                       lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[CountyAscii]" />
                     <inputColumn
-                      refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CountyFull]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="CountyFull"
-                      externalMetadataColumnId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyFull]"
-                      lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[CountyFull]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CountyFips]"
-                      cachedDataType="numeric"
-                      cachedName="CountyFips"
-                      cachedPrecision="18"
-                      externalMetadataColumnId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyFips]"
-                      lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[CountyFips]" />
-                    <inputColumn
                       refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StateId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="3"
+                      cachedLength="10"
                       cachedName="StateId"
                       externalMetadataColumnId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateId]"
                       lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[StateId]" />
@@ -3225,24 +3851,39 @@
                       externalMetadataColumnId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateName]"
                       lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[StateName]" />
                     <inputColumn
-                      refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Lat]"
-                      cachedDataType="r4"
-                      cachedName="Lat"
+                      refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LatTransform]"
+                      cachedDataType="r8"
+                      cachedName="LatTransform"
                       externalMetadataColumnId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Lat]"
-                      lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Lat]" />
+                      lineageId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Output].Columns[LatTransform]" />
                     <inputColumn
-                      refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Long]"
-                      cachedDataType="r4"
-                      cachedName="Long"
+                      refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LongTransform]"
+                      cachedDataType="r8"
+                      cachedName="LongTransform"
                       externalMetadataColumnId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Long]"
-                      lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Long]" />
+                      lineageId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Output].Columns[LongTransform]" />
                     <inputColumn
-                      refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Population]"
-                      cachedDataType="numeric"
-                      cachedName="Population"
-                      cachedPrecision="18"
+                      refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PopulationTransform]"
+                      cachedDataType="i4"
+                      cachedName="PopulationTransform"
                       externalMetadataColumnId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
-                      lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[Population]" />
+                      lineageId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Output].Columns[PopulationTransform]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CountyFips]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="CountyFips"
+                      externalMetadataColumnId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyFips]"
+                      lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[CountyFips]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CountyFull]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CountyFull"
+                      externalMetadataColumnId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyFull]"
+                      lineageId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output].Columns[CountyFull]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3272,7 +3913,7 @@
                       refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateId]"
                       codePage="1252"
                       dataType="str"
-                      length="3"
+                      length="10"
                       name="StateId" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StateName]"
@@ -3323,8 +3964,13 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task 4.Paths[Flat File Source Output]"
+              refId="Package\Data Flow Task 4.Paths[Derived Column Output]"
               endId="Package\Data Flow Task 4\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task 4\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task 4.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task 4\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task 4\Flat File Source.Outputs[Flat File Source Output]" />
           </paths>
@@ -3345,21 +3991,21 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="166,42"
+          Size="186,42"
           Id="Package\Data Flow Task 1"
-          TopLeft="93,145" />
+          TopLeft="96.5714285790312,86.8823529921188" />
         <NodeLayout
-          Size="163,42"
+          Size="186,42"
           Id="Package\Data Flow Task 2"
-          TopLeft="342,148" />
+          TopLeft="97.1428573496488,175.117646905326" />
         <NodeLayout
-          Size="182,42"
+          Size="168,42"
           Id="Package\Data Flow Task 3"
-          TopLeft="581,149" />
+          TopLeft="362.142857913764,86.4117646301391" />
         <NodeLayout
-          Size="165,42"
+          Size="168,42"
           Id="Package\Data Flow Task 4"
-          TopLeft="845,150" />
+          TopLeft="362.142857913764,176.647058668691" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3367,154 +4013,59 @@
     design-time-name="Package\Data Flow Task 1">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="156,48"
-          Id="Package\Data Flow Task 1\Flat File Source"
-          TopLeft="199,154" />
+          Size="149.6,41.6"
+          Id="Package\Data Flow Task 1\OLE DB Source"
+          TopLeft="298.571429207009,103.99999990884" />
         <NodeLayout
-          Size="171,42"
+          Size="170.4,41.6"
           Id="Package\Data Flow Task 1\OLE DB Destination"
-          TopLeft="194,281" />
+          TopLeft="64.2857144225617,211.823529226093" />
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\Data Flow Task 1\Flat File Source"
+          TopLeft="64.7142854284265,101.235294163897" />
         <EdgeLayout
           Id="Package\Data Flow Task 1.Paths[Flat File Source Output]"
-          TopLeft="278.25,202">
+          TopLeft="150.299999925494,142.835294163897">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,79"
+              EndConnector="0,68.9882350621962"
               Start="0,0"
-              End="0,71.5">
+              End="0,61.4882350621962">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,71.5" />
+                    End="0,61.4882350621962" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <TaskHost
-    design-time-name="Package\Data Flow Task 2">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Data Flow Task 2\Flat File Source"
-          TopLeft="207,100" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task 2\OLE DB Destination"
-          TopLeft="204,201" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 2.Paths[Flat File Source Output]"
-          TopLeft="286,142">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59"
-              Start="0,0"
-              End="0,51.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Data Flow Task 3">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Data Flow Task 3\Flat File Source"
-          TopLeft="227,124" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task 3\OLE DB Destination"
-          TopLeft="222,229" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 3.Paths[Flat File Source Output]"
-          TopLeft="305,166">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63"
-              Start="0,0"
-              End="0,55.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Data Flow Task 4">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Data Flow Task 4\Flat File Source"
-          TopLeft="268,180" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task 4\OLE DB Destination"
-          TopLeft="251,303" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 4.Paths[Flat File Source Output]"
-          TopLeft="340,222">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,81"
-              Start="0,0"
-              End="0,73.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,73.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task 1\OLE DB Destination">
     <Properties>
@@ -3528,6 +4079,46 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task 2\OLE DB Destination"
+          TopLeft="100.714284213526,174.999997392297" />
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Data Flow Task 2\Flat File Source"
+          TopLeft="94.1428557400193,91.8571414883647" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 2.Paths[Flat File Source Output]"
+          TopLeft="183.428569976773,133.457141488365">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.5428559039321"
+              Start="0,0"
+              End="0,34.0428559039321">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.0428559039321" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task 2\OLE DB Destination">
     <Properties>
@@ -3541,6 +4132,44 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 3">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Data Flow Task 3\OLE DB Destination"
+          TopLeft="113.999998301268,187.333330541849" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Data Flow Task 3\Flat File Source"
+          TopLeft="110.333331689239,73.6666655689478" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 3.Paths[Flat File Source Output]"
+          TopLeft="198.566664995253,115.266665568948">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72.0666649729014"
+              Start="0,0"
+              End="0,64.5666649729014">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.5666649729014" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task 3\OLE DB Destination">
     <Properties>
@@ -3554,6 +4183,72 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 4">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Data Flow Task 4\Flat File Source"
+          TopLeft="426.857140549592,39.142855531403" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Data Flow Task 4\Derived Column"
+          TopLeft="413,154" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 4.Paths[Flat File Source Output]"
+          TopLeft="501.428570274796,81.142855531403">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72.857144468597"
+              Start="0,0"
+              End="0,65.357144468597">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.357144468597" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task 4\OLE DB Destination"
+          TopLeft="420,283" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 4.Paths[Derived Column Output]"
+          TopLeft="501.75,196">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,87"
+              Start="0,0"
+              End="0,79.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,31.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task 4\OLE DB Destination">
     <Properties>
