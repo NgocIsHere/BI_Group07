@@ -7,12 +7,12 @@
   DTS:CreatorName="MSI\Admin"
   DTS:DTSID="{826E8588-1BB1-40FA-85A3-CFFCB39C228B}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{864C4E00-AA59-4007-9396-32E7BD3FB1D3}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{6DF3B67B-B4BC-42CD-810D-A56DDB02CBD3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -235,6 +235,391 @@
               DTS:TextQualified="True"
               DTS:ObjectName="Last Updated"
               DTS:DTSID="{0207E7C9-2D98-40B6-BB8F-16096C50D5CC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager AQI1]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="123"
+      DTS:DTSID="{EE6BF2D6-D876-4BEC-B188-71E612CFBB7F}"
+      DTS:ObjectName="Flat File Connection Manager AQI1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\user\Desktop\class_homework\BI\OneDrive_1_10-14-2024\Air_Quality_Data\10_state_aqi_2021.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{A1890B6B-9CF1-43AE-9F83-DDF866463B40}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{287015E1-B16E-400A-915B-476F116E5044}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{F81FA9C0-0831-4F2E-AB4B-34D020E0277D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{C605BF5F-58B2-4D27-9A2B-1220AD4BD1E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{D2B7FB27-1C6E-4779-9582-DA0877366948}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{6896B23D-A8DF-4634-ACAE-C5CAD224EC8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{232818AE-064A-4B64-87D3-0F69948F5428}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{320411F8-A8AF-45E0-A4F0-0FB7BA340522}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{35EDC006-B46E-4D91-833A-713D67A64CB9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{20503736-0124-4932-89D1-8AA09BA7D354}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{211D4FBC-5F41-46AC-8378-374F1C50BF28}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{D49551DA-3476-46F6-802F-859E3BDC19B5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager AQI2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{138B44AB-1CF7-417D-B1A0-74DCDFFBCD76}"
+      DTS:ObjectName="Flat File Connection Manager AQI2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\user\Desktop\class_homework\BI\OneDrive_1_10-14-2024\Air_Quality_Data\10_state_aqi_2022.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{8E99E1BB-44F8-4CF8-A893-A516272482A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{F6546060-011B-4720-BF24-D21EBC5ACA53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{09818257-5F12-4A70-9530-4CE6534EF8C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{E89C03D6-04A5-4A1B-BEC6-D67E0D26F27A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{30C020F5-5478-4ACF-922A-53B787A6F125}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{CD8DC246-A609-4B7C-82F8-73EDC82A639D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{AB8A03FC-CC18-43B2-9093-0C94523FD743}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{08949340-7684-432C-8799-4456C5502189}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{4816D7DF-5651-449F-B356-117175EB8A71}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{B9218F93-2007-4D07-93E1-0A69E61761ED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{5E0FD106-AAB2-44F9-8FD3-3D7D526C44F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{F129FA27-57B2-4D83-A1EE-4B81D8F22253}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager AQI3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1DCC1A72-4CC3-4CD7-ABD5-E37FA0F658B2}"
+      DTS:ObjectName="Flat File Connection Manager AQI3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\user\Desktop\class_homework\BI\OneDrive_1_10-14-2024\Air_Quality_Data\10_state_aqi_2023.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Name"
+              DTS:DTSID="{E4860770-00B8-4F10-AD7C-7086946172A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="county Name"
+              DTS:DTSID="{DCE6243F-8325-45AF-A7F4-4F3E7ADC6424}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State Code"
+              DTS:DTSID="{31EF8449-7199-48CD-8B78-1C6CE190A559}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="County Code"
+              DTS:DTSID="{409DF36D-4C52-4354-984D-43DFEE7CA69F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{37E29B76-6393-4B90-9A6C-3AD9629B8B65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AQI"
+              DTS:DTSID="{BD4D176A-36E0-43CC-B093-A9FFD19F1846}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{762F245E-8CE8-4C95-9DB6-073B7BB2550F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Parameter"
+              DTS:DTSID="{566CB459-4050-4020-AFAE-8F49FB895A5A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Defining Site"
+              DTS:DTSID="{D745206D-A4A7-4C73-AF72-5743014BB754}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Sites Reporting"
+              DTS:DTSID="{2F9DB622-E3E1-4077-96CF-A0A4DB471C4B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created"
+              DTS:DTSID="{5050E5E6-117C-48B3-AAC8-7DF05D14E6A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated"
+              DTS:DTSID="{1D40E7AB-9BF2-4E26-9F7F-EAEF2F00EBC2}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -665,7 +1050,1521 @@
                     </output>
                   </outputs>
                 </component>
+                <component
+                  refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source AQI1"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager AQI1]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager AQI1]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[State Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[State Name]"
+                          name="State Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[county Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[county Name]"
+                          name="county Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[State Code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[State Code]"
+                          name="State Code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[County Code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[County Code]"
+                          name="County Code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Date]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Date]"
+                          name="Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[AQI]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[AQI]"
+                          name="AQI"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Category]"
+                          name="Category"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                          name="Defining Parameter"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Defining Site]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Defining Site]"
+                          name="Defining Site"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                          name="Number of Sites Reporting"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Created]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Created]"
+                          name="Created"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Last Updated]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].Columns[Last Updated]"
+                          name="Last Updated"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="State Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="county Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="State Code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="County Code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Date" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="AQI" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Defining Parameter" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Defining Site" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Number of Sites Reporting" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Created" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Last Updated" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source AQI2"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager AQI2]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager AQI2]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[State Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[State Name]"
+                          name="State Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[county Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[county Name]"
+                          name="county Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[State Code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[State Code]"
+                          name="State Code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[County Code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[County Code]"
+                          name="County Code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Date]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Date]"
+                          name="Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[AQI]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[AQI]"
+                          name="AQI"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Category]"
+                          name="Category"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                          name="Defining Parameter"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Defining Site]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Defining Site]"
+                          name="Defining Site"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                          name="Number of Sites Reporting"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Created]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Created]"
+                          name="Created"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Last Updated]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].Columns[Last Updated]"
+                          name="Last Updated"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="State Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="county Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="State Code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="County Code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Date" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="AQI" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Defining Parameter" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Defining Site" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Number of Sites Reporting" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Created" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Last Updated" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source AQI3"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager AQI3]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager AQI3]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[State Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[State Name]"
+                          name="State Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[county Name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[county Name]"
+                          name="county Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[State Code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[State Code]"
+                          name="State Code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[County Code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[County Code]"
+                          name="County Code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Date]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Date]"
+                          name="Date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[AQI]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[AQI]"
+                          name="AQI"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Category]"
+                          name="Category"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Defining Parameter]"
+                          name="Defining Parameter"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Defining Site]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Defining Site]"
+                          name="Defining Site"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Number of Sites Reporting]"
+                          name="Number of Sites Reporting"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Created]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Created]"
+                          name="Created"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Last Updated]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].Columns[Last Updated]"
+                          name="Last Updated"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[State Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="State Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[county Name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="county Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[State Code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="State Code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[County Code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="County Code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Date" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[AQI]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="AQI" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Defining Parameter]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Defining Parameter" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Defining Site]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Defining Site" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Number of Sites Reporting]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Number of Sites Reporting" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Created]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Created" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output].ExternalColumns[Last Updated]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Last Updated" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination.Connections[OleDbConnection]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <externalMetadataColumns
+                        isUsed="True" />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\AQI2021\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\AQI2021\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 1"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination 1"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 1.Connections[OleDbConnection]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <externalMetadataColumns
+                        isUsed="True" />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 2"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination 2"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 2.Connections[OleDbConnection]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 2.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <externalMetadataColumns
+                        isUsed="True" />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 2.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 2.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
               </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\AQI2021.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\AQI2021\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\AQI2021.Paths[Flat File Source Output1]"
+                  endId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\AQI2021.Paths[Flat File Source Output2]"
+                  endId="Package\Foreach Loop Container\AQI2021\OLE DB Destination 2.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3.Outputs[Flat File Source Output]" />
+              </paths>
             </pipeline>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -1016,23 +2915,125 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="153.333333333334,42.6666666666667"
-          Id="Package\Foreach Loop Container\Us"
-          TopLeft="31.9166599052651,6.3508761863079" />
-        <NodeLayout
-          Size="153.333333333334,42.6666666666667"
+          Size="153.6,42.4"
           Id="Package\Foreach Loop Container\AQI2021"
           TopLeft="200.041652389492,7.0350867051112" />
+        <NodeLayout
+          Size="153.6,42.4"
+          Id="Package\Foreach Loop Container\Us"
+          TopLeft="31.9166599052651,6.3508761863079" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="558.666666666667,120"
-          Size="558.666666666667,162.666666666667"
+          PanelSize="558.4,120"
+          Size="558.4,162.4"
           Id="Package\Foreach Loop Container"
           TopLeft="83.7499962560833,23.2631576393119" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\AQI2021">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154.4,42.4"
+          Id="Package\Foreach Loop Container\AQI2021\Flat File Source"
+          TopLeft="213.999993622303,45.9999986290932" />
+        <NodeLayout
+          Size="177.6,41.6"
+          Id="Package\Foreach Loop Container\AQI2021\Flat File Source AQI1"
+          TopLeft="191.428574688581,232.470591495606" />
+        <NodeLayout
+          Size="177.6,41.6"
+          Id="Package\Foreach Loop Container\AQI2021\Flat File Source AQI2"
+          TopLeft="427.857150143507,235.529415067917" />
+        <NodeLayout
+          Size="177.6,41.6"
+          Id="Package\Foreach Loop Container\AQI2021\Flat File Source AQI3"
+          TopLeft="652.142868248784,231.705885602529" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Foreach Loop Container\AQI2021\OLE DB Destination"
+          TopLeft="196.42857477373,422.882358871942" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\AQI2021.Paths[Flat File Source Output]"
+          TopLeft="280.928574731155,274.070591495606">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,148.811767376335"
+              Start="0,0"
+              End="0,141.311767376335">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,141.311767376335" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Foreach Loop Container\AQI2021\OLE DB Destination 1"
+          TopLeft="425.000007237707,418.294123513476" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\AQI2021.Paths[Flat File Source Output1]"
+          TopLeft="515.628578690607,277.129415067917">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,141.164708445559"
+              Start="0,0"
+              End="0,133.664708445559">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,133.664708445559" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Foreach Loop Container\AQI2021\OLE DB Destination 2"
+          TopLeft="652.142868248784,417.529417620398" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\AQI2021.Paths[Flat File Source Output2]"
+          TopLeft="741.342868248784,273.305885602529">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,144.22353201787"
+              Start="0,0"
+              End="0,136.72353201787">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,136.72353201787" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <TaskHost
     design-time-name="Package\Foreach Loop Container\Us">
     <LayoutInfo>
@@ -1041,18 +3042,6 @@
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\Foreach Loop Container\Us\Flat File Source"
-          TopLeft="213.999993622303,45.9999986290932" />
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Foreach Loop Container\AQI2021">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Foreach Loop Container\AQI2021\Flat File Source"
           TopLeft="213.999993622303,45.9999986290932" />
       </GraphLayout>
     </LayoutInfo>
