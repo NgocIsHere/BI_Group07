@@ -62,65 +62,68 @@ CREATE TABLE Stage_uscounties (
 );
 
 
-CREATE TABLE DimState (
-    StateID INT PRIMARY KEY IDENTITY(1,1),
-    StateName VARCHAR(50) UNIQUE,
-    StateCode INT UNIQUE
+CREATE TABLE NDS_State (
+    StateID VARCHAR(10) PRIMARY KEY,
+    StateName VARCHAR(50) ,
+    StateCode INT 
 );
 
--- Tạo bảng DimCounty (chứa thông tin về các quận/huyện)
-CREATE TABLE DimCounty (
+CREATE TABLE NDS_County (
     CountyID INT PRIMARY KEY IDENTITY(1,1),
     CountyName VARCHAR(50),
-    StateID INT,
+    StateID VARCHAR(10),
     CountyCode INT,
-    CONSTRAINT FK_State FOREIGN KEY (StateID) REFERENCES DimState(StateID)
+	CountyFull VARCHAR(50),
+	CountyFips INT,
+	Lat FLOAT,
+	Long FLOAT,
+    CONSTRAINT FK_State_NDS_County FOREIGN KEY (StateID) REFERENCES NDS_State(StateID)
 );
 
--- Tạo bảng DimDate (chứa thông tin về thời gian)
-CREATE TABLE DimDate (
-    DateID INT PRIMARY KEY IDENTITY(1,1),
-    Date DATE,
+CREATE TABLE NDS_Time (
+    TimeID INT PRIMARY KEY IDENTITY(1,1),
     Year INT,
     Quarter INT,
     Month INT,
-    Day INT
+    Day INT,
+    DayLightSaving BIT
 );
 
--- Tạo bảng DimSite (chứa thông tin về các địa điểm đo lường)
-CREATE TABLE DimSite (
-    SiteID INT PRIMARY KEY IDENTITY(1,1),
+CREATE TABLE NDS_AQI (
+    AQI_ID INT PRIMARY KEY IDENTITY(1,1),
+    CountyID INT,
+    TimeID INT,
+    AQI INT,
+    Category VARCHAR(100),
     DefiningParameter VARCHAR(10),
     DefiningSite VARCHAR(20),
-    NumberOfSitesReporting INT
+    Color VARCHAR(20),
+    DateDate DATE,
+    CONSTRAINT FK_County_NDS_AQI FOREIGN KEY (CountyID) REFERENCES NDS_County(CountyID),
+    CONSTRAINT FK_Time_NDS_AQI FOREIGN KEY (TimeID) REFERENCES NDS_Time(TimeID)
 );
 
-CREATE TABLE FactAQI (
-    FactID INT PRIMARY KEY IDENTITY(1,1),
-    CountyID INT,
-    StateID INT,
-    DateID INT,
-    SiteID INT,
-    AQI INT,
-    Category VARCHAR(50),
-    Created DATETIME,
-    LastUpdated DATETIME,
-    CONSTRAINT FK_County_FactAQI FOREIGN KEY (CountyID) REFERENCES DimCounty(CountyID),
-    CONSTRAINT FK_State_FactAQI FOREIGN KEY (StateID) REFERENCES DimState(StateID),
-    CONSTRAINT FK_Date_FactAQI FOREIGN KEY (DateID) REFERENCES DimDate(DateID),
-    CONSTRAINT FK_Site_FactAQI FOREIGN KEY (SiteID) REFERENCES DimSite(SiteID)
-);
+
 
 
 SELECT TABLE_NAME 
 FROM BI_THUCHANH_1.INFORMATION_SCHEMA.TABLES 
 WHERE TABLE_TYPE = 'BASE TABLE'
 
--- drop table Stage_10_state_aqi_2021
--- drop table Stage_10_state_aqi_2022
--- drop table Stage_10_state_aqi_2023
--- drop table Stage_uscounties
+--drop table Stage_10_state_aqi_2021
+--drop table Stage_10_state_aqi_2022
+--drop table Stage_10_state_aqi_2023
+--drop table Stage_uscounties
+--drop table NDS_AQI
+--drop table NDS_Time
+--drop table NDS_County
+--drop table NDS_State
+
 
 
 select * from Stage_10_state_aqi_2021
+select * from Stage_10_state_aqi_2022
+select * from Stage_10_state_aqi_2023
 select * from Stage_uscounties
+select * from NDS_State
+select * from NDS_County
