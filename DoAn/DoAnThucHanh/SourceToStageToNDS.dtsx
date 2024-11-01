@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="SourceToStageToNDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="55"
-  DTS:VersionGUID="{B2A1EA9C-FC35-4E15-8FC7-3252F9093C82}">
+  DTS:VersionBuild="80"
+  DTS:VersionGUID="{18D64619-18EA-417F-AAD2-2FF4AC97DCD5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -632,6 +632,1232 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\AQI to NDS County and AQI to NDS Time"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{042E60CB-066E-434F-9CC8-257522D8537F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="AQI to NDS County and AQI to NDS Time"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Add CountyCode from StageAQI2021 to NDS_County"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE NDS_County
+SET CountyCode = ?
+WHERE CountyName = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Inputs[OLE DB Command Input].Columns[CountyCode]"
+                      cachedDataType="i4"
+                      cachedName="CountyCode"
+                      externalMetadataColumnId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output].Columns[CountyCode]" />
+                    <inputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Inputs[OLE DB Command Input].Columns[CountyName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CountyName"
+                      externalMetadataColumnId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output].Columns[CountyName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Add CountyCode from StageAQI2022 to NDS_County"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE NDS_County
+SET CountyCode = ?
+WHERE CountyName = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Inputs[OLE DB Command Input].Columns[CountyCode]"
+                      cachedDataType="i4"
+                      cachedName="CountyCode"
+                      externalMetadataColumnId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output].Columns[CountyCode]" />
+                    <inputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Inputs[OLE DB Command Input].Columns[CountyName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CountyName"
+                      externalMetadataColumnId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output].Columns[CountyName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Add CountyCode from StageAQI2023 to NDS_County"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE NDS_County
+SET CountyCode = ?
+WHERE CountyName = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Inputs[OLE DB Command Input].Columns[CountyCode]"
+                      cachedDataType="i4"
+                      cachedName="CountyCode"
+                      externalMetadataColumnId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output].Columns[CountyCode]" />
+                    <inputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Inputs[OLE DB Command Input].Columns[CountyName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CountyName"
+                      externalMetadataColumnId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output].Columns[CountyName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup 4"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[NDS_County]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[NDS_County]) [refTable]
+where [refTable].[CountyName] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CountyID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountyName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StateID" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CountyCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountyFull" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CountyFips" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Lat" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Long" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Population" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output].Columns[CountyName]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Inputs[Lookup Input].Columns[CountyName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CountyName"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output].Columns[CountyName]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CountyName</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup 5"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[NDS_County]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[NDS_County]) [refTable]
+where [refTable].[CountyName] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CountyID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountyName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StateID" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CountyCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountyFull" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CountyFips" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Lat" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Long" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Population" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output].Columns[CountyName]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Inputs[Lookup Input].Columns[CountyName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CountyName"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output].Columns[CountyName]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CountyName</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup 6"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[NDS_County]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[NDS_County]) [refTable]
+where [refTable].[CountyName] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CountyID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountyName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StateID" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CountyCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountyFull" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CountyFips" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Lat" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Long" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Population" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output].Columns[CountyName]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Inputs[Lookup Input].Columns[CountyName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CountyName"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output].Columns[CountyName]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CountyName</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source - AQI 2021"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stage_10_state_aqi_2021]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT CountyName, CountyCode
+FROM Stage_10_state_aqi_2021;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output].Columns[CountyName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output].ExternalColumns[CountyName]"
+                      length="50"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output].Columns[CountyName]"
+                      name="CountyName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output].Columns[CountyCode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output].ExternalColumns[CountyCode]"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output].Columns[CountyCode]"
+                      name="CountyCode"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output].ExternalColumns[CountyName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CountyName" />
+                    <externalMetadataColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output].ExternalColumns[CountyCode]"
+                      dataType="i4"
+                      name="CountyCode" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Error Output].Columns[CountyName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Error Output].Columns[CountyName]"
+                      name="CountyName" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Error Output].Columns[CountyCode]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Error Output].Columns[CountyCode]"
+                      name="CountyCode" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source - AQI 2022"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stage_10_state_aqi_2021]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT CountyName, CountyCode
+FROM Stage_10_state_aqi_2022;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output].Columns[CountyName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output].ExternalColumns[CountyName]"
+                      length="50"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output].Columns[CountyName]"
+                      name="CountyName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output].Columns[CountyCode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output].ExternalColumns[CountyCode]"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output].Columns[CountyCode]"
+                      name="CountyCode"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output].ExternalColumns[CountyName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CountyName" />
+                    <externalMetadataColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output].ExternalColumns[CountyCode]"
+                      dataType="i4"
+                      name="CountyCode" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Error Output].Columns[CountyName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Error Output].Columns[CountyName]"
+                      name="CountyName" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Error Output].Columns[CountyCode]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Error Output].Columns[CountyCode]"
+                      name="CountyCode" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source - AQI 2023"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stage_10_state_aqi_2021]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT CountyName, CountyCode
+FROM Stage_10_state_aqi_2023;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output].Columns[CountyName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output].ExternalColumns[CountyName]"
+                      length="50"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output].Columns[CountyName]"
+                      name="CountyName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output].Columns[CountyCode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output].ExternalColumns[CountyCode]"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output].Columns[CountyCode]"
+                      name="CountyCode"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output].ExternalColumns[CountyName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CountyName" />
+                    <externalMetadataColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output].ExternalColumns[CountyCode]"
+                      dataType="i4"
+                      name="CountyCode" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Error Output].Columns[CountyName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Error Output].Columns[CountyName]"
+                      name="CountyName" />
+                    <outputColumn
+                      refId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Error Output].Columns[CountyCode]"
+                      dataType="i4"
+                      lineageId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Error Output].Columns[CountyCode]"
+                      name="CountyCode" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\AQI to NDS County and AQI to NDS Time.Paths[Lookup Match Output]"
+              endId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\AQI to NDS County and AQI to NDS Time.Paths[Lookup Match Output1]"
+              endId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\AQI to NDS County and AQI to NDS Time.Paths[Lookup Match Output2]"
+              endId="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\AQI to NDS County and AQI to NDS Time.Paths[OLE DB Source Output]"
+              endId="Package\AQI to NDS County and AQI to NDS Time\Lookup 4.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\AQI to NDS County and AQI to NDS Time.Paths[OLE DB Source Output1]"
+              endId="Package\AQI to NDS County and AQI to NDS Time\Lookup 6.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\AQI to NDS County and AQI to NDS Time.Paths[OLE DB Source Output2]"
+              endId="Package\AQI to NDS County and AQI to NDS Time\Lookup 5.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Source to Stage"
       DTS:CreationName="Microsoft.Pipeline"
@@ -3389,7 +4615,6 @@
       DTS:refId="Package\StageAQI2021 to NDS_State"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{380A242A-AABD-495C-92C7-A1B933573BAF}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -3785,7 +5010,7 @@ where [refTable].[StateName] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -3928,7 +5153,7 @@ where [refTable].[StateName] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -4071,7 +5296,7 @@ where [refTable].[StateName] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -5022,7 +6247,7 @@ where [refTable].[StateName] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[NDS_County]) [refTable]
-where [refTable].[CountyName] = ? and [refTable].[CountyFull] = ? and [refTable].[CountyFips] = ? and [refTable].[StateID] = ?</property>
+where [refTable].[CountyName] = ? and [refTable].[CountyFull] = ? and [refTable].[CountyFips] = ? and [refTable].[StateID] = ? and [refTable].[Population] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -5053,12 +6278,12 @@ where [refTable].[CountyName] = ? and [refTable].[CountyFull] = ? and [refTable]
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CountyID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountyName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StateID" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CountyCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountyFull" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CountyFips" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Lat" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Long" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CountyID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountyName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StateID" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CountyCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountyFull" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CountyFips" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Lat" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Long" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Population" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[County]};#{Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[CountyFull]};#{Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[CountyFips]};#{Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[StateId]};</property>
+                  name="ParameterMap">#{Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[County]};#{Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[CountyFull]};#{Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[CountyFips]};#{Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[StateId]};#{Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[Population]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -5151,6 +6376,22 @@ where [refTable].[CountyName] = ? and [refTable].[CountyFull] = ? and [refTable]
                           name="CopyFromReferenceColumn" />
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\StageUSCounties to NDS_County\Lookup to NDS_County.Inputs[Lookup Input].Columns[Population]"
+                      cachedDataType="i4"
+                      cachedName="Population"
+                      lineageId="Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[Population]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Population</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5214,8 +6455,10 @@ where [refTable].[CountyName] = ? and [refTable].[CountyFull] = ? and [refTable]
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">INSERT INTO NDS_County (CountyName, StateID, CountyFull, CountyFips, Lat, Long)
-VALUES (?, ?, ?, ?, ?, ?)</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">INSERT INTO NDS_County (CountyName, StateID, CountyFull, CountyFips, Lat, Long, Population)
+SELECT DISTINCT County, StateID, CountyFull, CountyFips, Lat, Long, Population
+FROM Stage_uscounties;
+</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -5236,125 +6479,8 @@ VALUES (?, ?, ?, ?, ?, ?)</property>
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].Columns[County]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="County"
-                      externalMetadataColumnId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[County]" />
-                    <inputColumn
-                      refId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].Columns[StateId]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="StateId"
-                      externalMetadataColumnId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[StateId]" />
-                    <inputColumn
-                      refId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].Columns[CountyFull]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="CountyFull"
-                      externalMetadataColumnId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[CountyFull]" />
-                    <inputColumn
-                      refId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].Columns[CountyFips]"
-                      cachedDataType="i4"
-                      cachedName="CountyFips"
-                      externalMetadataColumnId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[CountyFips]" />
-                    <inputColumn
-                      refId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].Columns[Lat]"
-                      cachedDataType="r8"
-                      cachedName="Lat"
-                      externalMetadataColumnId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      lineageId="Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[Lat]" />
-                    <inputColumn
-                      refId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].Columns[Long]"
-                      cachedDataType="r8"
-                      cachedName="Long"
-                      externalMetadataColumnId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      lineageId="Package\StageUSCounties to NDS_County\StageUSCounties.Outputs[OLE DB Source Output].Columns[Long]" />
-                  </inputColumns>
                   <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      dataType="i4"
-                      name="Param_3">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      dataType="r8"
-                      name="Param_4">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\StageUSCounties to NDS_County\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      dataType="r8"
-                      name="Param_5">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
+                    isUsed="True" />
                 </input>
               </inputs>
               <outputs>
@@ -5730,7 +6856,7 @@ where [refTable].[StateID] = ? and [refTable].[StateName] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">2</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -6135,16 +7261,33 @@ VALUES (?, ?)
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Stage tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0BE19689-D42F-4E18-B922-0F8E753FF1A4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Stage tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7A892715-8AF5-4006-A95C-DD567C0D2BDE}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE Stage_uscounties;&#xA;TRUNCATE TABLE Stage_10_state_aqi_2021;&#xA;TRUNCATE TABLE Stage_10_state_aqi_2022;&#xA;TRUNCATE TABLE Stage_10_state_aqi_2023;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{66934211-A188-4E96-AE9E-8859BBB8A962}"
+      DTS:DTSID="{ACA5AF92-165C-47BB-87D9-7A77DAA846A1}"
       DTS:From="Package\Source to Stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\StageUScounties to NDS_State" />
+      DTS:To="Package\StageAQI2021 to NDS_State" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
@@ -6153,6 +7296,30 @@ VALUES (?, ?)
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\StageUSCounties to NDS_County" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{7B7D8801-D85D-4CA0-AA08-D13CA13422CD}"
+      DTS:From="Package\StageUSCounties to NDS_County"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\AQI to NDS County and AQI to NDS Time" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{25217DDB-7AD5-4E44-BBF5-75CAFB48A719}"
+      DTS:From="Package\Truncate Stage tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Source to Stage" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{1C1C9269-03D2-45AF-BFA6-9935DBB68F7B}"
+      DTS:From="Package\StageAQI2021 to NDS_State"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\StageUScounties to NDS_State" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -6165,29 +7332,45 @@ VALUES (?, ?)
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="221,42"
+          Size="273.6,41.6"
+          Id="Package\AQI to NDS County and AQI to NDS Time"
+          TopLeft="202,588" />
+        <NodeLayout
+          Size="251.2,41.6"
           Id="Package\Source to Stage"
-          TopLeft="192.142857551879,83.3529411034085" />
+          TopLeft="193.142857551879,169.352941103409" />
         <NodeLayout
-          Size="224,42"
+          Size="240.8,41.6"
+          Id="Package\StageAQI2021 to NDS_State"
+          TopLeft="199,288" />
+        <NodeLayout
+          Size="268.8,41.6"
+          Id="Package\StageUSCounties to NDS_County"
+          TopLeft="200,489" />
+        <NodeLayout
+          Size="252.8,41.6"
           Id="Package\StageUScounties to NDS_State"
-          TopLeft="191.428571836073,164.411764561769" />
+          TopLeft="198.428571836073,385.411764561769" />
+        <NodeLayout
+          Size="256,41.6"
+          Id="Package\Truncate Stage tables"
+          TopLeft="196,81" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="303.035714693976,125.352941103408">
+          TopLeft="319.071428775939,211.352941103409">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39.0588234583605"
+              EndConnector="0,76.6470588965915"
               Start="0,0"
-              End="0,31.5588234583605">
+              End="0,69.1470588965915">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5588234583605" />
+                    End="0,69.1470588965915" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6196,28 +7379,98 @@ VALUES (?, ?)
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="217,42"
-          Id="Package\StageAQI2021 to NDS_State"
-          TopLeft="537,156" />
-        <NodeLayout
-          Size="234,42"
-          Id="Package\StageUSCounties to NDS_County"
-          TopLeft="193,268" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="306.714285918036,206.411764561769">
+          TopLeft="324.928571836073,427.411764561769">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61.588235438231"
+              EndConnector="9.57142816392701,61.588235438231"
               Start="0,0"
-              End="0,54.088235438231">
+              End="9.57142816392701,54.088235438231">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.088235438231" />
+                    End="0,26.7941177191155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.7941177191155"
+                    Point2="0,30.7941177191155"
+                    Point3="4,30.7941177191155" />
+                  <mssgle:LineSegment
+                    End="5.57142816392701,30.7941177191155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.57142816392701,30.7941177191155"
+                    Point2="9.57142816392701,30.7941177191155"
+                    Point3="9.57142816392701,34.7941177191155" />
+                  <mssgle:LineSegment
+                    End="9.57142816392701,54.088235438231" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="336.6,530.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.4"
+              Start="0,0"
+              End="0,49.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="321.321428775939,123">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.3529411034085"
+              Start="0,0"
+              End="0,38.8529411034085">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.8529411034085" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="322.214285918036,330">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.411764561769"
+              Start="0,0"
+              End="0,47.911764561769">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.911764561769" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6229,6 +7482,263 @@ VALUES (?, ?)
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\AQI to NDS County and AQI to NDS Time">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="121.6,41.6"
+          Id="Package\AQI to NDS County and AQI to NDS Time\Lookup 4"
+          TopLeft="154,193" />
+        <NodeLayout
+          Size="204.8,41.6"
+          Id="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022"
+          TopLeft="564,72" />
+        <NodeLayout
+          Size="121.6,41.6"
+          Id="Package\AQI to NDS County and AQI to NDS Time\Lookup 6"
+          TopLeft="154,558" />
+        <NodeLayout
+          Size="204.8,41.6"
+          Id="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023"
+          TopLeft="111,428" />
+        <NodeLayout
+          Size="121.6,41.6"
+          Id="Package\AQI to NDS County and AQI to NDS Time\Lookup 5"
+          TopLeft="607,202" />
+        <NodeLayout
+          Size="204.8,41.6"
+          Id="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021"
+          TopLeft="111,63" />
+        <NodeLayout
+          Size="328.8,41.6"
+          Id="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2021 to NDS_County"
+          TopLeft="50,326" />
+        <NodeLayout
+          Size="328.8,41.6"
+          Id="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2022 to NDS_County"
+          TopLeft="503,335" />
+        <NodeLayout
+          Size="328.8,41.6"
+          Id="Package\AQI to NDS County and AQI to NDS Time\Add CountyCode from StageAQI2023 to NDS_County"
+          TopLeft="50,691" />
+        <EdgeLayout
+          Id="Package\AQI to NDS County and AQI to NDS Time.Paths[OLE DB Source Output1]"
+          TopLeft="214.25,470">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88"
+              Start="0,0"
+              End="0,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\AQI to NDS County and AQI to NDS Time.Paths[OLE DB Source Output]"
+          TopLeft="214.25,105">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88"
+              Start="0,0"
+              End="0,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\AQI to NDS County and AQI to NDS Time.Paths[Lookup Match Output2]"
+          TopLeft="667.75,244">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,91"
+              Start="0,0"
+              End="0,83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,83.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,35.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\AQI to NDS County and AQI to NDS Time.Paths[Lookup Match Output1]"
+          TopLeft="214.75,600">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,91"
+              Start="0,0"
+              End="0,83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,83.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="39.3514704818871,1,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\AQI to NDS County and AQI to NDS Time.Paths[Lookup Match Output]"
+          TopLeft="214.75,235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,91"
+              Start="0,0"
+              End="0,83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,83.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,35.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\AQI to NDS County and AQI to NDS Time.Paths[OLE DB Source Output2]"
+          TopLeft="667.25,114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88"
+              Start="0,0"
+              End="0,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\AQI to NDS County and AQI to NDS Time\Lookup 4">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[NDS_County]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2022">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\AQI to NDS County and AQI to NDS Time\Lookup 6">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[NDS_County]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2023">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\AQI to NDS County and AQI to NDS Time\OLE DB Source - AQI 2021">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Source to Stage">
     <LayoutInfo>
@@ -6446,170 +7956,22 @@ VALUES (?, ?)
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\StageUScounties to NDS_State">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="164,42"
-          Id="Package\StageUScounties to NDS_State\Stage_USCounties"
-          TopLeft="70.000000713127,71.6470587712465" />
-        <NodeLayout
-          Size="113,42"
-          Id="Package\StageUScounties to NDS_State\Lookup"
-          TopLeft="99.0000001490116,251.470588008735" />
-        <NodeLayout
-          Size="204,42"
-          Id="Package\StageUScounties to NDS_State\USCounties_to_NDS_State"
-          TopLeft="58.0000000851494,387.705881990312" />
-        <EdgeLayout
-          Id="Package\StageUScounties to NDS_State.Paths[OLE DB Source Output]"
-          TopLeft="153.750000431069,113.647058771246">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,137.823529237488"
-              Start="0,0"
-              End="0,130.323529237488">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,130.323529237488" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\StageUScounties to NDS_State.Paths[Lookup No Match Output]"
-          TopLeft="157.750000117081,293.470588008735">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,94.235293981577"
-              Start="0,0"
-              End="0,86.735293981577">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,86.735293981577" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,37.5629594907885,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StageUScounties to NDS_State\Stage_USCounties">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\StageUScounties to NDS_State\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[NDS_State]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\StageAQI2021 to NDS_State">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="205,42"
-          Id="Package\StageAQI2021 to NDS_State\OLE DB Source - AQI 2021"
-          TopLeft="162,17" />
-        <NodeLayout
           Size="113,42"
           Id="Package\StageAQI2021 to NDS_State\Lookup"
           TopLeft="205,147" />
-        <EdgeLayout
-          Id="Package\StageAQI2021 to NDS_State.Paths[OLE DB Source Output]"
-          TopLeft="263,59">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,88"
-              Start="0,0"
-              End="0,80.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,80.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="311,42"
-          Id="Package\StageAQI2021 to NDS_State\Add StateCode from StageAQI2021 to NDS_State"
-          TopLeft="111,276" />
-        <EdgeLayout
-          Id="Package\StageAQI2021 to NDS_State.Paths[Lookup Match Output]"
-          TopLeft="264,189">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,87"
-              Start="0,0"
-              End="0,79.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,79.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,33.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="205,42"
+          Id="Package\StageAQI2021 to NDS_State\OLE DB Source - AQI 2023"
+          TopLeft="162,378" />
+        <NodeLayout
+          Size="122,42"
+          Id="Package\StageAQI2021 to NDS_State\Lookup 2"
+          TopLeft="205,508" />
         <NodeLayout
           Size="205,42"
           Id="Package\StageAQI2021 to NDS_State\OLE DB Source - AQI 2022"
@@ -6619,63 +7981,17 @@ VALUES (?, ?)
           Id="Package\StageAQI2021 to NDS_State\Lookup 1"
           TopLeft="734,144" />
         <NodeLayout
+          Size="205,42"
+          Id="Package\StageAQI2021 to NDS_State\OLE DB Source - AQI 2021"
+          TopLeft="162,17" />
+        <NodeLayout
+          Size="311,42"
+          Id="Package\StageAQI2021 to NDS_State\Add StateCode from StageAQI2021 to NDS_State"
+          TopLeft="111,276" />
+        <NodeLayout
           Size="311,42"
           Id="Package\StageAQI2021 to NDS_State\Add StateCode from StageAQI2022 to NDS_State"
           TopLeft="640,273" />
-        <EdgeLayout
-          Id="Package\StageAQI2021 to NDS_State.Paths[OLE DB Source Output1]"
-          TopLeft="794.25,56">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,88"
-              Start="0,0"
-              End="0,80.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,80.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\StageAQI2021 to NDS_State.Paths[Lookup Match Output1]"
-          TopLeft="795.25,186">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,87"
-              Start="0,0"
-              End="0,79.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,79.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,33.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="205,42"
-          Id="Package\StageAQI2021 to NDS_State\OLE DB Source - AQI 2023"
-          TopLeft="162,378" />
-        <NodeLayout
-          Size="122,42"
-          Id="Package\StageAQI2021 to NDS_State\Lookup 2"
-          TopLeft="205,508" />
         <NodeLayout
           Size="311,42"
           Id="Package\StageAQI2021 to NDS_State\Add StateCode from StageAQI2023 to NDS_State"
@@ -6699,7 +8015,57 @@ VALUES (?, ?)
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageAQI2021 to NDS_State.Paths[OLE DB Source Output1]"
+          TopLeft="794.25,56">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88"
+              Start="0,0"
+              End="0,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageAQI2021 to NDS_State.Paths[OLE DB Source Output]"
+          TopLeft="263,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88"
+              Start="0,0"
+              End="0,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6726,29 +8092,64 @@ VALUES (?, ?)
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageAQI2021 to NDS_State.Paths[Lookup Match Output1]"
+          TopLeft="795.25,186">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,87"
+              Start="0,0"
+              End="0,79.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,33.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageAQI2021 to NDS_State.Paths[Lookup Match Output]"
+          TopLeft="264,189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,87"
+              Start="0,0"
+              End="0,79.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,33.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\StageAQI2021 to NDS_State\OLE DB Source - AQI 2021">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\StageAQI2021 to NDS_State\Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6758,10 +8159,23 @@ VALUES (?, ?)
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StageAQI2021 to NDS_State\OLE DB Source - AQI 2023">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -6784,7 +8198,7 @@ VALUES (?, ?)
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6794,7 +8208,7 @@ VALUES (?, ?)
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6802,7 +8216,7 @@ VALUES (?, ?)
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\StageAQI2021 to NDS_State\OLE DB Source - AQI 2023">
+    design-time-name="Package\StageAQI2021 to NDS_State\OLE DB Source - AQI 2021">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6820,16 +8234,20 @@ VALUES (?, ?)
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="208,42"
+          Size="254.4,41.6"
           Id="Package\StageUSCounties to NDS_County\StageUSCounties"
-          TopLeft="212,109" />
+          TopLeft="222,109" />
         <NodeLayout
-          Size="188,42"
+          Size="247.2,41.6"
+          Id="Package\StageUSCounties to NDS_County\OLE DB Command"
+          TopLeft="230,367" />
+        <NodeLayout
+          Size="259.2,41.6"
           Id="Package\StageUSCounties to NDS_County\Lookup to NDS_County"
           TopLeft="221,219" />
         <EdgeLayout
           Id="Package\StageUSCounties to NDS_County.Paths[OLE DB Source Output]"
-          TopLeft="315.5,151">
+          TopLeft="349.75,151">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6849,43 +8267,27 @@ VALUES (?, ?)
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\StageUSCounties to NDS_County\OLE DB Command"
-          TopLeft="168,317" />
         <EdgeLayout
           Id="Package\StageUSCounties to NDS_County.Paths[Lookup No Match Output]"
-          TopLeft="315,261">
+          TopLeft="352,261">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-64,56"
+              EndConnector="0,106"
               Start="0,0"
-              End="-64,48.5">
+              End="0,98.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24"
-                    Point2="0,28"
-                    Point3="-4,28" />
-                  <mssgle:LineSegment
-                    End="-60,28" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-60,28"
-                    Point2="-64,28"
-                    Point3="-64,32" />
-                  <mssgle:LineSegment
-                    End="-64,48.5" />
+                    End="0,98.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-87.80638671875,33,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,43.4453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6921,10 +8323,114 @@ VALUES (?, ?)
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\StageUScounties to NDS_State">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="204,42"
+          Id="Package\StageUScounties to NDS_State\USCounties_to_NDS_State"
+          TopLeft="58.0000000851494,387.705881990312" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\StageUScounties to NDS_State\Lookup"
+          TopLeft="99.0000001490116,251.470588008735" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\StageUScounties to NDS_State\Stage_USCounties"
+          TopLeft="70.000000713127,71.6470587712465" />
+        <EdgeLayout
+          Id="Package\StageUScounties to NDS_State.Paths[OLE DB Source Output]"
+          TopLeft="153.750000431069,113.647058771246">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,137.823529237488"
+              Start="0,0"
+              End="0,130.323529237488">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,130.323529237488" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageUScounties to NDS_State.Paths[Lookup No Match Output]"
+          TopLeft="157.750000117081,293.470588008735">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,94.235293981577"
+              Start="0,0"
+              End="0,86.735293981577">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,86.735293981577" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,37.5629594907885,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StageUScounties to NDS_State\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[NDS_State]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StageUScounties to NDS_State\Stage_USCounties">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
