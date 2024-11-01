@@ -87,6 +87,7 @@ CREATE TABLE NDS_Time (
     Quarter INT,
     Month INT,
     Day INT,
+	DateDate DATE,
     DayLightSaving BIT
 );
 
@@ -121,10 +122,12 @@ WHERE TABLE_TYPE = 'BASE TABLE'
 --drop table NDS_State
 
 
-
 select * from Stage_10_state_aqi_2021
 select * from Stage_10_state_aqi_2022
 select * from Stage_10_state_aqi_2023
 select * from Stage_uscounties
 select * from NDS_State
-select * from NDS_County where CountyCode = 37
+select * from NDS_County
+select * from NDS_Time
+select * from NDS_AQI
+--truncate table NDS_AQI
