@@ -105,8 +105,21 @@ CREATE TABLE NDS_AQI (
     CONSTRAINT FK_Time_NDS_AQI FOREIGN KEY (TimeID) REFERENCES NDS_Time(TimeID)
 );
 
+CREATE TABLE Metadata_AQI (
+    AQI_ID INT PRIMARY KEY,       -- AQI_ID: ID liên kết với bản ghi trong NDS_AQI hoặc bảng AQI khác
+    CET DATETIME,                 -- CET (Creation Time): Thời gian tạo bản ghi
+    LSET DATETIME                  -- LSET (Last Update Time): Thời gian cập nhật bản ghi cuối cùng
+);
 
-
+CREATE TRIGGER trg_InsertMetadataAQI
+ON NDS_AQI
+AFTER INSERT
+AS
+BEGIN
+    INSERT INTO Metadata_AQI (AQI_ID, CET, LSET)
+    SELECT AQI_ID, GETDATE(), NULL
+    FROM inserted;
+END;
 
 SELECT TABLE_NAME 
 FROM BI_THUCHANH_1.INFORMATION_SCHEMA.TABLES 
@@ -129,5 +142,8 @@ select * from Stage_uscounties
 select * from NDS_State
 select * from NDS_County
 select * from NDS_Time
-select * from NDS_AQI
+SELECT * FROM NDS_AQI
+select * from Metadata_AQI
+
 --truncate table NDS_AQI
+--truncate table Metadata_AQI
