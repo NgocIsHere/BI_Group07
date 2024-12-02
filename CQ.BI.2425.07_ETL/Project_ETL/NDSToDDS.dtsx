@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="NDSToDDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{141167B7-D96F-405F-9A98-4A07CECC1E89}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{32C52B2E-2F3E-492F-BE42-11F9B7E1CC83}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2785,19 +2785,19 @@ where [refTable].[TimeID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="182,42"
+          Size="204.8,41.6"
           Id="Package\NDS_AQI to Fact_AQI"
           TopLeft="252,414" />
         <NodeLayout
-          Size="212,42"
+          Size="212,41.6"
           Id="Package\NDS_County to Dim_County"
           TopLeft="245,221" />
         <NodeLayout
-          Size="217,42"
+          Size="216.8,41.6"
           Id="Package\NDS_State to Dim_State"
           TopLeft="244,126" />
         <NodeLayout
-          Size="203,42"
+          Size="203.2,41.6"
           Id="Package\NDS_Time to Dim_Time"
           TopLeft="251,318" />
         <EdgeLayout
@@ -2846,30 +2846,18 @@ where [refTable].[TimeID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="352.5,360">
+          TopLeft="353.5,359.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-9.5,54"
+              EndConnector="0,54.4"
               Start="0,0"
-              End="-9.5,46.5">
+              End="0,46.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23"
-                    Point2="0,27"
-                    Point3="-4,27" />
-                  <mssgle:LineSegment
-                    End="-5.5,27" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5.5,27"
-                    Point2="-9.5,27"
-                    Point3="-9.5,31" />
-                  <mssgle:LineSegment
-                    End="-9.5,46.5" />
+                    End="0,46.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3003,7 +2991,7 @@ where [refTable].[TimeID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3013,7 +3001,7 @@ where [refTable].[TimeID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
