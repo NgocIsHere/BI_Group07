@@ -160,22 +160,6 @@
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
-    <Dimension dwd:design-time-name="7885eaaa-ff00-48b5-aea0-137f6efc56fb">
-      <ID>Fact AQI 1</ID>
-      <Name>Fact AQI 1</Name>
-      <DimensionID>Fact AQI 1</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="f83a87d3-672e-4190-8b8b-ddf5cf4b5130">
-          <AttributeID>AQI ID</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="826f471f-67ef-4150-91ed-e72367d53965">
-          <AttributeID>County ID</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="261abb7b-e17a-4b9f-913f-bbfd7813bca9">
-          <AttributeID>Time ID</AttributeID>
-        </Attribute>
-      </Attributes>
-    </Dimension>
     <Dimension dwd:design-time-name="b06da97b-d22b-4ca5-be95-3509abad2993">
       <ID>Dim County</ID>
       <Name>Dim County</Name>
@@ -274,24 +258,6 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="338e5785-216d-4077-a4a1-c34407ad74b5">
-          <CubeDimensionID>Fact AQI 1</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="908d38f9-35ef-4fd6-8ee7-a258f4d34eb3">
-              <AttributeID>AQI ID</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="c05320e5-2c11-4b8b-a726-74f3d8d4e563">
-                  <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6d658631-e744-4a7b-a7ce-a75cca5843cf">
-                    <TableID>dbo_Fact_AQI</TableID>
-                    <ColumnID>AQI_ID</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
         <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="136ce422-b9ca-4bf6-bddc-879473c475cb">
           <CubeDimensionID>Dim County</CubeDimensionID>
           <Attributes>

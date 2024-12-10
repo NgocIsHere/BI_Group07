@@ -1,6 +1,6 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="46a52f4c-de7a-472a-847b-5c9ad9cb0e5c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
-  <ID>Fact AQI 1</ID>
-  <Name>Fact AQI 1</Name>
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9d86ae2b-6b0d-4fa7-8833-a5ba30a2ba56" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact AQI</ID>
+  <Name>Fact AQI</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -42,52 +42,52 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="1a551c39-8352-4e85-a6a4-35fd8576168c">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="eb200218-baa2-4e0c-af0b-75c942a60276">
     <DataSourceViewID>AQI Analysis</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="f68cc5b1-847c-49dd-9393-efda5dca179c">
+  <ErrorConfiguration dwd:design-time-name="1fdcf956-820a-4b60-853e-1b7c1274fca7">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="6c411f5b-c494-41c1-8176-8ee00b9c9e47">
+    <Attribute dwd:design-time-name="8b9e9206-688f-4795-b87d-1507bc6ea356">
       <ID>AQI ID</ID>
       <Name>AQI ID</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="6b09147f-5081-4e7e-8be8-693e7c39673f">
+        <KeyColumn dwd:design-time-name="d1f224b1-d6cf-473c-9357-790906e7bbe5">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="816112ff-b0d3-410c-a782-a18269403b5e">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d2f4c6cb-aba6-4aed-aca9-3dae59003b87">
             <TableID>dbo_Fact_AQI</TableID>
             <ColumnID>AQI_ID</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="9aca3f9c-5bb5-404e-992f-44afab50ca5e">
-          <AttributeID>County ID</AttributeID>
-          <Name>County ID</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="7588f23d-f8dd-414d-9806-8d8c84302ecb">
+        <AttributeRelationship dwd:design-time-name="35601689-0e21-4c43-9fff-fb6e22266ad7">
           <AttributeID>Time ID</AttributeID>
           <Name>Time ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f4b79e7d-6624-4acb-a6c4-e105eec830f9">
+          <AttributeID>County ID</AttributeID>
+          <Name>County ID</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="cae0f7d4-f74a-4f3f-a2d6-a3418d08d1cd">
-      <ID>County ID</ID>
-      <Name>County ID</Name>
+    <Attribute dwd:design-time-name="1993fd33-839c-4f67-9df6-49b6ee8bc79b">
+      <ID>Time ID</ID>
+      <Name>Time ID</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="3bf511c4-604d-4153-bb79-1faecb1c2b3b">
+        <KeyColumn dwd:design-time-name="6d5ce541-0662-4e21-9610-4488b1451a76">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="ec49d9fe-2df1-48b3-81ea-c44b182b955d">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f883425d-7951-4b5e-a9f7-7e1385f7f230">
             <TableID>dbo_Fact_AQI</TableID>
-            <ColumnID>CountyID</ColumnID>
+            <ColumnID>TimeID</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
@@ -96,15 +96,15 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="d5715957-905e-487f-8e18-91293588a6de">
-      <ID>Time ID</ID>
-      <Name>Time ID</Name>
+    <Attribute dwd:design-time-name="2593d89b-083a-4117-a558-ba2242975de9">
+      <ID>County ID</ID>
+      <Name>County ID</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="625267e1-bfe4-46a8-a491-3219b112413e">
+        <KeyColumn dwd:design-time-name="fd7105c1-138b-4ca2-954c-8cb828bc69e1">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="50da2e47-f242-4c9b-ae16-da2d361d32f1">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="149463b1-074a-4d81-87be-aa30a1d4c5f6">
             <TableID>dbo_Fact_AQI</TableID>
-            <ColumnID>TimeID</ColumnID>
+            <ColumnID>CountyID</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>

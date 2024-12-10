@@ -74,28 +74,33 @@
               <Attributes>
                 <Attribute Id="Time ID" />
                 <Attribute Id="Date Date" />
-                <Attribute Id="Day" />
                 <Attribute Id="Day Light Saving" />
               </Attributes>
               <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Day" Expanded="false">
+              <Attributes>
+                <Attribute Id="Day" />
+              </Attributes>
+              <Position x="193" y="20" />
             </Shape>
             <Shape Id="Month" Expanded="false">
               <Attributes>
                 <Attribute Id="Month" />
               </Attributes>
-              <Position x="193" y="20" />
+              <Position x="367" y="20" />
             </Shape>
             <Shape Id="Quarter" Expanded="false">
               <Attributes>
                 <Attribute Id="Quarter" />
               </Attributes>
-              <Position x="367" y="20" />
+              <Position x="541" y="20" />
             </Shape>
             <Shape Id="Year" Expanded="false">
               <Attributes>
                 <Attribute Id="Year" />
               </Attributes>
-              <Position x="541" y="20" />
+              <Position x="715" y="20" />
             </Shape>
           </Shapes>
         </DiagramLayout>
@@ -130,10 +135,6 @@
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="7460a0c9-094b-4b9e-9538-f263a8d676e9">
-          <AttributeID>Month</AttributeID>
-          <Name>Month</Name>
-        </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="4e758378-df23-4b60-8658-324c4a4008b7">
           <AttributeID>Day</AttributeID>
           <Name>Day</Name>
@@ -223,6 +224,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="247a2db2-20b2-4307-ae29-83d9a77de0a1">
+          <AttributeID>Month</AttributeID>
+          <Name>Month</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
@@ -280,10 +287,10 @@
           <Name>Month</Name>
           <SourceAttributeID>Month</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="3a9e8af0-d007-48a5-ae4b-8361b69f7593">
-          <ID>Time ID</ID>
-          <Name>Time ID</Name>
-          <SourceAttributeID>Time ID</SourceAttributeID>
+        <Level dwd:design-time-name="b7e47f61-b7cd-4aa2-a472-7ba49b84b000">
+          <ID>Day</ID>
+          <Name>Day</Name>
+          <SourceAttributeID>Day</SourceAttributeID>
         </Level>
       </Levels>
     </Hierarchy>
