@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="SourceToStageToNDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="141"
-  DTS:VersionGUID="{EBFEAA3C-9030-4818-B06D-2EA9620D7A65}">
+  DTS:VersionBuild="144"
+  DTS:VersionGUID="{7F054B51-8A7D-4C44-9B61-A076FE9C5988}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -511,6 +511,7 @@
       DTS:refId="Package\Source to Stage"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Source to Stage"
+      DTS:Disabled="True"
       DTS:DTSID="{BC646224-C238-4468-8574-CD287B3E5692}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -3264,6 +3265,7 @@
       DTS:refId="Package\Stage AQI to NDS County"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{042E60CB-066E-434F-9CC8-257522D8537F}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -7955,7 +7957,7 @@ FROM Stage_uscounties;</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Stage_10_state_aqi_2021]</property>
+                  name="OpenRowset">[dbo].[Stage_10_state_aqi_2023]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -9313,49 +9315,49 @@ WHERE AQI_ID = ?;
               startId="Package\StageAQI to NDS_AQI\Generate Time columns 3.Outputs[Derived Column Output]" />
             <path
               refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output8]"
-              endId="Package\StageAQI to NDS_AQI\TimeID 3.Inputs[Lookup Input]"
+              endId="Package\StageAQI to NDS_AQI\TimeID 2.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\StageAQI to NDS_AQI\CountyID 3.Outputs[Lookup Match Output]" />
+              startId="Package\StageAQI to NDS_AQI\CountyID 2.Outputs[Lookup Match Output]" />
             <path
               refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output7]"
-              endId="Package\StageAQI to NDS_AQI\Update Metadata_AQI 3.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\StageAQI to NDS_AQI\Lookup NDS_AQI 3.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output6]"
-              endId="Package\StageAQI to NDS_AQI\Lookup NDS_AQI.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\StageAQI to NDS_AQI\TimeID.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output4]"
-              endId="Package\StageAQI to NDS_AQI\Lookup NDS_AQI 2.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\StageAQI to NDS_AQI\TimeID 2.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output5]"
-              endId="Package\StageAQI to NDS_AQI\TimeID.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\StageAQI to NDS_AQI\CountyID.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output2]"
-              endId="Package\StageAQI to NDS_AQI\Update Metadata_AQI.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\StageAQI to NDS_AQI\Lookup NDS_AQI.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output1]"
-              endId="Package\StageAQI to NDS_AQI\Update Metadata_AQI 2.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\StageAQI to NDS_AQI\Lookup NDS_AQI 2.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output]"
               endId="Package\StageAQI to NDS_AQI\Lookup NDS_AQI 3.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\StageAQI to NDS_AQI\TimeID 3.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output3]"
-              endId="Package\StageAQI to NDS_AQI\TimeID 2.Inputs[Lookup Input]"
+              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output6]"
+              endId="Package\StageAQI to NDS_AQI\Update Metadata_AQI 2.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
-              startId="Package\StageAQI to NDS_AQI\CountyID 2.Outputs[Lookup Match Output]" />
+              startId="Package\StageAQI to NDS_AQI\Lookup NDS_AQI 2.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output4]"
+              endId="Package\StageAQI to NDS_AQI\TimeID.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\StageAQI to NDS_AQI\CountyID.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output5]"
+              endId="Package\StageAQI to NDS_AQI\Update Metadata_AQI.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\StageAQI to NDS_AQI\Lookup NDS_AQI.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output2]"
+              endId="Package\StageAQI to NDS_AQI\Lookup NDS_AQI.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\StageAQI to NDS_AQI\TimeID.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output1]"
+              endId="Package\StageAQI to NDS_AQI\Update Metadata_AQI 3.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\StageAQI to NDS_AQI\Lookup NDS_AQI 3.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output]"
+              endId="Package\StageAQI to NDS_AQI\TimeID 3.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\StageAQI to NDS_AQI\CountyID 3.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output3]"
+              endId="Package\StageAQI to NDS_AQI\Lookup NDS_AQI 2.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\StageAQI to NDS_AQI\TimeID 2.Outputs[Lookup Match Output]" />
             <path
               refId="Package\StageAQI to NDS_AQI.Paths[Lookup No Match Output]"
               endId="Package\StageAQI to NDS_AQI\Insert to NDS_AQI 3.Inputs[OLE DB Command Input]"
@@ -9373,14 +9375,14 @@ WHERE AQI_ID = ?;
               startId="Package\StageAQI to NDS_AQI\Lookup NDS_AQI 2.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\StageAQI to NDS_AQI.Paths[OLE DB Source Output1]"
-              endId="Package\StageAQI to NDS_AQI\Generate Time columns 2.Inputs[Derived Column Input]"
-              name="OLE DB Source Output"
-              startId="Package\StageAQI to NDS_AQI\Stage_AQI_2022.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\StageAQI to NDS_AQI.Paths[OLE DB Source Output]"
               endId="Package\StageAQI to NDS_AQI\Generate Time columns.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\StageAQI to NDS_AQI\Stage_AQI_2021.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\StageAQI to NDS_AQI.Paths[OLE DB Source Output]"
+              endId="Package\StageAQI to NDS_AQI\Generate Time columns 2.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\StageAQI to NDS_AQI\Stage_AQI_2022.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\StageAQI to NDS_AQI.Paths[OLE DB Source Output2]"
               endId="Package\StageAQI to NDS_AQI\Generate Time columns 3.Inputs[Derived Column Input]"
@@ -9394,6 +9396,7 @@ WHERE AQI_ID = ?;
       DTS:refId="Package\StageAQI to NDS_State"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{380A242A-AABD-495C-92C7-A1B933573BAF}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -10995,6 +10998,7 @@ WHERE StateName = ?</property>
       DTS:refId="Package\StageAQI to NDS_Time"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{5f932e78-7f1f-4c21-8181-ff6de6628b0a}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -13190,7 +13194,7 @@ FROM Stage_uscounties;</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Stage_10_state_aqi_2021]</property>
+                  name="OpenRowset">[dbo].[Stage_10_state_aqi_2023]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -13564,6 +13568,7 @@ FROM Stage_uscounties;</property>
       DTS:refId="Package\StageUSCounties to NDS_County"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{127BA757-4EF2-4FF2-8853-C6084871A8A9}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -14296,6 +14301,7 @@ where [refTable].[CountyName] = ? and [refTable].[CountyFull] = ? and [refTable]
       DTS:refId="Package\StageUScounties to NDS_State"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{F122D629-E321-4120-913C-36D12075562F}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -14746,6 +14752,7 @@ VALUES (?, ?)
       DTS:refId="Package\Truncate Stage tables"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{0BE19689-D42F-4E18-B922-0F8E753FF1A4}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -14831,35 +14838,35 @@ VALUES (?, ?)
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="251,42"
+          Size="251.2,41.6"
           Id="Package\Source to Stage"
           TopLeft="96.7142859180364,115.117647042067" />
         <NodeLayout
-          Size="247,42"
+          Size="247.2,41.6"
           Id="Package\Stage AQI to NDS County"
           TopLeft="103.714286269278,461.235294312032" />
         <NodeLayout
-          Size="244,42"
+          Size="244,41.6"
           Id="Package\StageAQI to NDS_AQI"
           TopLeft="99.8441560646323,648.682352616084" />
         <NodeLayout
-          Size="238,42"
+          Size="238.4,41.6"
           Id="Package\StageAQI to NDS_State"
           TopLeft="104.99999979777,275.764705904473" />
         <NodeLayout
-          Size="245,42"
+          Size="244.8,41.6"
           Id="Package\StageAQI to NDS_Time"
           TopLeft="103.00000020223,553.541176689774" />
         <NodeLayout
-          Size="234,42"
+          Size="233.6,41.6"
           Id="Package\StageUSCounties to NDS_County"
           TopLeft="107.857142660995,368.647058953566" />
         <NodeLayout
-          Size="253,42"
+          Size="252.8,41.6"
           Id="Package\StageUScounties to NDS_State"
           TopLeft="95.5714287599743,205.764705904473" />
         <NodeLayout
-          Size="256,42"
+          Size="256,41.6"
           Id="Package\Truncate Stage tables"
           TopLeft="99.5714283661574,26.7647059386577" />
         <EdgeLayout
@@ -15025,39 +15032,39 @@ VALUES (?, ?)
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="159,42"
+          Size="159.2,41.6"
           Id="Package\Source to Stage\state_aqi_2022"
           TopLeft="221.76190522972,9.29411757667791" />
         <NodeLayout
-          Size="184,42"
+          Size="184,41.6"
           Id="Package\Source to Stage\Derived Column US_C"
           TopLeft="641.285715646586,112.529411603835" />
         <NodeLayout
-          Size="170,42"
+          Size="169.6,41.6"
           Id="Package\Source to Stage\stage_aqi_2022"
           TopLeft="221.285714752516,108.705882195422" />
         <NodeLayout
-          Size="182,42"
+          Size="182.4,41.6"
           Id="Package\Source to Stage\us_counties"
           TopLeft="639.380953737769,10.0588234583605" />
         <NodeLayout
-          Size="158,42"
+          Size="158.4,41.6"
           Id="Package\Source to Stage\state_aqi_2021"
           TopLeft="24.1428571899934,8.5294116949953" />
         <NodeLayout
-          Size="182,42"
+          Size="182.4,41.6"
           Id="Package\Source to Stage\stage_us_counties"
           TopLeft="644.142858509811,217.294117394358" />
         <NodeLayout
-          Size="161,42"
+          Size="160.8,41.6"
           Id="Package\Source to Stage\stage_aqi_2021"
           TopLeft="23.4285714741872,107.176470432057" />
         <NodeLayout
-          Size="155,42"
+          Size="155.2,41.6"
           Id="Package\Source to Stage\stage_aqi_2023"
           TopLeft="430.571429483745,110.99999984047" />
         <NodeLayout
-          Size="159,42"
+          Size="159.2,41.6"
           Id="Package\Source to Stage\state_aqi_2023"
           TopLeft="425.571429473101,8.5294116949952" />
         <EdgeLayout
@@ -15231,39 +15238,39 @@ VALUES (?, ?)
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="353,42"
+          Size="352.8,41.6"
           Id="Package\Stage AQI to NDS County\Uodate CountyCode from StageAQI2023 to NDS_County 2"
           TopLeft="50,694.211764664324" />
         <NodeLayout
-          Size="266,42"
+          Size="265.6,41.6"
           Id="Package\Stage AQI to NDS County\Lookup CountyName 2023"
           TopLeft="91,561.211764664324" />
         <NodeLayout
-          Size="344,42"
+          Size="344,41.6"
           Id="Package\Stage AQI to NDS County\Update CountyCode from StageAQI2022 to NDS_County"
           TopLeft="441.428572368257,329.611764664324" />
         <NodeLayout
-          Size="344,42"
+          Size="344,41.6"
           Id="Package\Stage AQI to NDS County\Update CountyCode from StageAQI2021 to NDS_County"
           TopLeft="50,326" />
         <NodeLayout
-          Size="219,42"
+          Size="219.2,41.6"
           Id="Package\Stage AQI to NDS County\OLE DB Source - AQI 2023"
           TopLeft="111,431.211764664324" />
         <NodeLayout
-          Size="278,42"
+          Size="278.4,41.6"
           Id="Package\Stage AQI to NDS County\Lookup CountyName 2022"
           TopLeft="470.428572368257,197.376470546007" />
         <NodeLayout
-          Size="205,42"
+          Size="204.8,41.6"
           Id="Package\Stage AQI to NDS County\OLE DB Source - AQI 2022"
           TopLeft="502.428572368257,66.6117646643241" />
         <NodeLayout
-          Size="205,42"
+          Size="204.8,41.6"
           Id="Package\Stage AQI to NDS County\OLE DB Source - AQI 2021"
           TopLeft="111,63" />
         <NodeLayout
-          Size="203,42"
+          Size="203.2,41.6"
           Id="Package\Stage AQI to NDS County\Lookup CountyName 2021"
           TopLeft="113,193" />
         <EdgeLayout
@@ -15465,139 +15472,113 @@ VALUES (?, ?)
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="123,42"
+          Size="123.2,41.6"
           Id="Package\StageAQI to NDS_AQI\TimeID 2"
           TopLeft="753.599991476536,328.999995097518" />
         <NodeLayout
-          Size="167,42"
+          Size="167.2,41.6"
           Id="Package\StageAQI to NDS_AQI\Insert to NDS_AQI"
           TopLeft="30.9999988377095,727.999990671873" />
         <NodeLayout
-          Size="200,42"
+          Size="200,41.6"
           Id="Package\StageAQI to NDS_AQI\Generate Time columns 2"
           TopLeft="577.599994561076,157.599998301268" />
         <NodeLayout
-          Size="123,42"
+          Size="123.2,41.6"
           Id="Package\StageAQI to NDS_AQI\TimeID 3"
           TopLeft="1179.19998784065,328.999995097518" />
         <NodeLayout
-          Size="192,42"
+          Size="192,41.6"
           Id="Package\StageAQI to NDS_AQI\Update Metadata_AQI 3"
           TopLeft="1177.99999941885,739.999990671873" />
         <NodeLayout
-          Size="158,42"
+          Size="158.4,41.6"
           Id="Package\StageAQI to NDS_AQI\Stage_AQI_2023"
-          TopLeft="1018.1999926069,20.647057966584" />
+          TopLeft="1018.1999926069,21.6470579516828" />
         <NodeLayout
-          Size="170,42"
+          Size="169.6,41.6"
           Id="Package\StageAQI to NDS_AQI\Lookup NDS_AQI 3"
           TopLeft="1030.9999858737,471.599994531274" />
         <NodeLayout
-          Size="176,42"
+          Size="176,41.6"
           Id="Package\StageAQI to NDS_AQI\Insert to NDS_AQI 2"
           TopLeft="515.999998837709,731.999990671873" />
         <NodeLayout
-          Size="192,42"
+          Size="192,41.6"
           Id="Package\StageAQI to NDS_AQI\Update Metadata_AQI 2"
           TopLeft="751.999999418854,737.999990671873" />
         <NodeLayout
-          Size="170,42"
+          Size="169.6,41.6"
           Id="Package\StageAQI to NDS_AQI\Lookup NDS_AQI 2"
           TopLeft="601.999991804361,471.59999448657" />
         <NodeLayout
-          Size="176,42"
+          Size="176,41.6"
           Id="Package\StageAQI to NDS_AQI\Insert to NDS_AQI 3"
           TopLeft="979.999998837709,743.999990671873" />
         <NodeLayout
-          Size="200,42"
+          Size="200,41.6"
           Id="Package\StageAQI to NDS_AQI\Generate Time columns 3"
-          TopLeft="994.19999092519,160.599998301268" />
+          TopLeft="993.199990940091,160.599998301268" />
         <NodeLayout
-          Size="191,42"
+          Size="191.2,41.6"
           Id="Package\StageAQI to NDS_AQI\Generate Time columns"
           TopLeft="121.999997928739,158.599999403954" />
         <NodeLayout
-          Size="158,42"
+          Size="158.4,41.6"
           Id="Package\StageAQI to NDS_AQI\Stage_AQI_2022"
           TopLeft="592.599996242779,28.647057966584" />
         <NodeLayout
-          Size="132,42"
+          Size="132,41.6"
           Id="Package\StageAQI to NDS_AQI\CountyID 3"
           TopLeft="935.199991476536,335.99999499321" />
         <NodeLayout
-          Size="183,42"
+          Size="183.2,41.6"
           Id="Package\StageAQI to NDS_AQI\Update Metadata_AQI"
           TopLeft="266.999999418855,733.999990671873" />
         <NodeLayout
-          Size="160,42"
+          Size="160,41.6"
           Id="Package\StageAQI to NDS_AQI\Lookup NDS_AQI"
           TopLeft="157.99999755621,498.199992758036" />
         <NodeLayout
-          Size="132,42"
+          Size="132,41.6"
           Id="Package\StageAQI to NDS_AQI\CountyID 2"
           TopLeft="509.599995112419,335.99999499321" />
         <NodeLayout
-          Size="113,42"
+          Size="112.8,41.6"
           Id="Package\StageAQI to NDS_AQI\TimeID"
           TopLeft="282.999995782971,356.999994680286" />
         <NodeLayout
-          Size="123,42"
+          Size="123.2,41.6"
           Id="Package\StageAQI to NDS_AQI\CountyID"
           TopLeft="38.9999994188547,363.999994575977" />
         <NodeLayout
-          Size="158,42"
+          Size="158.4,41.6"
           Id="Package\StageAQI to NDS_AQI\Stage_AQI_2021"
           TopLeft="143.999999610441,22.6470595014034" />
         <EdgeLayout
           Id="Package\StageAQI to NDS_AQI.Paths[OLE DB Source Output2]"
-          TopLeft="1095.69999176605,62.647057966584">
+          TopLeft="1095.2999917735,63.2470579516828">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,97.952940334684"
+              EndConnector="0,97.3529403495852"
               Start="0,0"
-              End="0,90.452940334684">
+              End="0,89.8529403495852">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,90.452940334684" />
+                    End="0,89.8529403495852" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\StageAQI to NDS_AQI.Paths[OLE DB Source Output1]"
-          TopLeft="674.599995401927,70.647057966584">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,86.952940334684"
-              Start="0,0"
-              End="0,79.452940334684">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,79.452940334684" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\StageAQI to NDS_AQI.Paths[OLE DB Source Output]"
           TopLeft="220.24999876959,64.6470595014034">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15615,9 +15596,29 @@ VALUES (?, ?)
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageAQI to NDS_AQI.Paths[OLE DB Source Output]"
+          TopLeft="674.599995401927,70.647057966584">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,86.952940334684"
+              Start="0,0"
+              End="0,79.452940334684">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79.452940334684" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15730,162 +15731,6 @@ VALUES (?, ?)
         </EdgeLayout>
         <EdgeLayout
           Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output8]"
-          TopLeft="1067.19999147654,353.499995045364">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="111.999996364114,0"
-              Start="0,0"
-              End="104.499996364114,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="104.499996364114,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="4.05861146330697,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output7]"
-          TopLeft="1142.9999858737,513.599994531274">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="131.00001354515,226.399996140599"
-              Start="0,0"
-              End="131.00001354515,218.899996140599">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,87.826571861222" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,87.826571861222"
-                    Point2="0,91.826571861222"
-                    Point3="4,91.826571861222" />
-                  <mssgle:LineSegment
-                    End="127.00001354515,91.826571861222" />
-                  <mssgle:CubicBezierSegment
-                    Point1="127.00001354515,91.826571861222"
-                    Point2="131.00001354515,91.826571861222"
-                    Point3="131.00001354515,95.826571861222" />
-                  <mssgle:LineSegment
-                    End="131.00001354515,218.899996140599" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="17.3086200538249,96.826571861222,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output6]"
-          TopLeft="339.499995782971,398.999994680286">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-101.499998226761,99.1999980777499"
-              Start="0,0"
-              End="-101.499998226761,91.6999980777499">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.599999038875" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.599999038875"
-                    Point2="0,49.599999038875"
-                    Point3="-4,49.599999038875" />
-                  <mssgle:LineSegment
-                    End="-97.499998226761,49.599999038875" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-97.499998226761,49.599999038875"
-                    Point2="-101.499998226761,49.599999038875"
-                    Point3="-101.499998226761,53.599999038875" />
-                  <mssgle:LineSegment
-                    End="-101.499998226761,91.6999980777499" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-98.9413858321305,54.599999038875,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output5]"
-          TopLeft="161.999999418855,381.499994628132">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="120.999996364116,0"
-              Start="0,0"
-              End="113.499996364116,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="113.499996364116,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="8.55861146330813,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output4]"
-          TopLeft="815.099991476536,370.999995097518">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-128.099999672175,100.599999389052"
-              Start="0,0"
-              End="-128.099999672175,93.099999389052">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.299999694526" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46.299999694526"
-                    Point2="0,50.299999694526"
-                    Point3="-4,50.299999694526" />
-                  <mssgle:LineSegment
-                    End="-124.099999672175,50.299999694526" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-124.099999672175,50.299999694526"
-                    Point2="-128.099999672175,50.299999694526"
-                    Point3="-128.099999672175,54.299999694526" />
-                  <mssgle:LineSegment
-                    End="-128.099999672175,93.099999389052" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-112.241386554838,55.299999694526,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output3]"
           TopLeft="641.599995112419,353.499995045364">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15904,84 +15749,12 @@ VALUES (?, ?)
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="4.0586114633085,5,96.3827734375,11.609375"
+              BoundingBox="4.05861146330849,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output2]"
-          TopLeft="263.333330889543,540.199992758036">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="95.1666685293117,193.799997913837"
-              Start="0,0"
-              End="95.1666685293117,186.299997913837">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,74.6712862818547" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,74.6712862818547"
-                    Point2="0,78.6712862818547"
-                    Point3="4,78.6712862818547" />
-                  <mssgle:LineSegment
-                    End="91.1666685293117,78.6712862818547" />
-                  <mssgle:CubicBezierSegment
-                    Point1="91.1666685293117,78.6712862818547"
-                    Point2="95.1666685293117,78.6712862818547"
-                    Point3="95.1666685293117,82.6712862818547" />
-                  <mssgle:LineSegment
-                    End="95.1666685293117,186.299997913837" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-0.608052454094171,83.6712862818547,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output1]"
-          TopLeft="713.999991804361,513.59999448657">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="134.000007614493,224.399996185303"
-              Start="0,0"
-              End="134.000007614493,216.899996185303">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,87.0153830681648" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,87.0153830681648"
-                    Point2="0,91.0153830681648"
-                    Point3="4,91.0153830681648" />
-                  <mssgle:LineSegment
-                    End="130.000007614493,91.0153830681648" />
-                  <mssgle:CubicBezierSegment
-                    Point1="130.000007614493,91.0153830681648"
-                    Point2="134.000007614493,91.0153830681648"
-                    Point3="134.000007614493,95.0153830681648" />
-                  <mssgle:LineSegment
-                    End="134.000007614493,216.899996185303" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="18.8086170884965,96.0153830681648,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output]"
+          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output7]"
           TopLeft="1240.69998784065,370.999995097518">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -16017,38 +15790,266 @@ VALUES (?, ?)
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\StageAQI to NDS_AQI.Paths[Derived Column Output2]"
-          TopLeft="1094.19999092519,202.599998301268">
+          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output6]"
+          TopLeft="713.999991804361,513.59999448657">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-92.999999448654,133.399996691942"
+              EndConnector="134.000007614493,224.399996185303"
               Start="0,0"
-              End="-92.999999448654,125.899996691942">
+              End="134.000007614493,216.899996185303">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,62.699998345971" />
+                    End="0,87.0153830681648" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,62.699998345971"
-                    Point2="0,66.699998345971"
-                    Point3="-4,66.699998345971" />
+                    Point1="0,87.0153830681648"
+                    Point2="0,91.0153830681648"
+                    Point3="4,91.0153830681648" />
                   <mssgle:LineSegment
-                    End="-88.999999448654,66.699998345971" />
+                    End="130.000007614493,91.0153830681648" />
                   <mssgle:CubicBezierSegment
-                    Point1="-88.999999448654,66.699998345971"
-                    Point2="-92.999999448654,66.699998345971"
-                    Point3="-92.999999448654,70.699998345971" />
+                    Point1="130.000007614493,91.0153830681648"
+                    Point2="134.000007614493,91.0153830681648"
+                    Point3="134.000007614493,95.0153830681648" />
                   <mssgle:LineSegment
-                    End="-92.999999448654,125.899996691942" />
+                    End="134.000007614493,216.899996185303" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="18.8086170884965,96.0153830681648,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output5]"
+          TopLeft="263.333330889543,540.199992758036">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="95.1666685293117,193.799997913837"
+              Start="0,0"
+              End="95.1666685293117,186.299997913837">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,74.6712862818547" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,74.6712862818547"
+                    Point2="0,78.6712862818547"
+                    Point3="4,78.6712862818547" />
+                  <mssgle:LineSegment
+                    End="91.1666685293117,78.6712862818547" />
+                  <mssgle:CubicBezierSegment
+                    Point1="91.1666685293117,78.6712862818547"
+                    Point2="95.1666685293117,78.6712862818547"
+                    Point3="95.1666685293117,82.6712862818547" />
+                  <mssgle:LineSegment
+                    End="95.1666685293117,186.299997913837" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-0.60805245409415,83.6712862818547,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output4]"
+          TopLeft="161.999999418855,381.499994628132">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120.999996364116,0"
+              Start="0,0"
+              End="113.499996364116,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="113.499996364116,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="8.558611463308,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output3]"
+          TopLeft="815.099991476536,370.999995097518">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-128.099999672175,100.599999389052"
+              Start="0,0"
+              End="-128.099999672175,93.099999389052">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.299999694526" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.299999694526"
+                    Point2="0,50.299999694526"
+                    Point3="-4,50.299999694526" />
+                  <mssgle:LineSegment
+                    End="-124.099999672175,50.299999694526" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-124.099999672175,50.299999694526"
+                    Point2="-128.099999672175,50.299999694526"
+                    Point3="-128.099999672175,54.299999694526" />
+                  <mssgle:LineSegment
+                    End="-128.099999672175,93.099999389052" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-112.241386554838,55.299999694526,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output2]"
+          TopLeft="339.499995782971,398.999994680286">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-101.499998226761,99.1999980777499"
+              Start="0,0"
+              End="-101.499998226761,91.6999980777499">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.599999038875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.599999038875"
+                    Point2="0,49.599999038875"
+                    Point3="-4,49.599999038875" />
+                  <mssgle:LineSegment
+                    End="-97.499998226761,49.599999038875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-97.499998226761,49.599999038875"
+                    Point2="-101.499998226761,49.599999038875"
+                    Point3="-101.499998226761,53.599999038875" />
+                  <mssgle:LineSegment
+                    End="-101.499998226761,91.6999980777499" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-98.9413858321305,54.599999038875,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output1]"
+          TopLeft="1142.9999858737,513.599994531274">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="131.00001354515,226.399996140599"
+              Start="0,0"
+              End="131.00001354515,218.899996140599">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.826571861222" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,87.826571861222"
+                    Point2="0,91.826571861222"
+                    Point3="4,91.826571861222" />
+                  <mssgle:LineSegment
+                    End="127.00001354515,91.826571861222" />
+                  <mssgle:CubicBezierSegment
+                    Point1="127.00001354515,91.826571861222"
+                    Point2="131.00001354515,91.826571861222"
+                    Point3="131.00001354515,95.826571861222" />
+                  <mssgle:LineSegment
+                    End="131.00001354515,218.899996140599" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="17.308620053825,96.826571861222,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageAQI to NDS_AQI.Paths[Lookup Match Output]"
+          TopLeft="1067.19999147654,353.499995045364">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="111.999996364114,0"
+              Start="0,0"
+              End="104.499996364114,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="104.499996364114,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="4.058611463307,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\StageAQI to NDS_AQI.Paths[Derived Column Output2]"
+          TopLeft="1093.19999094009,202.199998301268">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-91.9999994635551,133.799996691942"
+              Start="0,0"
+              End="-91.9999994635551,126.299996691942">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.899998345971" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,62.899998345971"
+                    Point2="0,66.899998345971"
+                    Point3="-4,66.899998345971" />
+                  <mssgle:LineSegment
+                    End="-87.9999994635551,66.899998345971" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-87.9999994635551,66.899998345971"
+                    Point2="-91.9999994635551,66.899998345971"
+                    Point3="-91.9999994635551,70.899998345971" />
+                  <mssgle:LineSegment
+                    End="-91.9999994635551,126.299996691942" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-53.9999997317776,71.899998345971,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16083,9 +16084,7 @@ VALUES (?, ?)
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16119,14 +16118,25 @@ VALUES (?, ?)
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\StageAQI to NDS_AQI\Stage_AQI_2023">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\StageAQI to NDS_AQI\Lookup NDS_AQI 3">
     <Properties>
@@ -16559,51 +16569,51 @@ VALUES (?, ?)
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="197,42"
+          Size="196.8,41.6"
           Id="Package\StageAQI to NDS_Time\Stage_AQI_2023"
           TopLeft="816.999991819262,26.6470595163046" />
         <NodeLayout
-          Size="204,42"
+          Size="204,41.6"
           Id="Package\StageAQI to NDS_Time\StageAQI2022_to_NDS_Time"
           TopLeft="439.999991819262,411.188231857569" />
         <NodeLayout
-          Size="218,42"
+          Size="217.6,41.6"
           Id="Package\StageAQI to NDS_Time\Stage_AQI_2022"
           TopLeft="436.999991819262,30.9999995827675" />
         <NodeLayout
-          Size="260,42"
+          Size="260,41.6"
           Id="Package\StageAQI to NDS_Time\Derived Column for Time in 2022"
           TopLeft="410.999990048153,153.352937875993" />
         <NodeLayout
-          Size="235,42"
+          Size="235.2,41.6"
           Id="Package\StageAQI to NDS_Time\StageAQI2023_to_NDS_Time"
           TopLeft="800.999991819262,414.835291791107" />
         <NodeLayout
-          Size="259,42"
+          Size="259.2,41.6"
           Id="Package\StageAQI to NDS_Time\Lookup Time columns in NDS_Time 2"
           TopLeft="413.999991883124,257.952937875992" />
         <NodeLayout
-          Size="262,42"
+          Size="262.4,41.6"
           Id="Package\StageAQI to NDS_Time\Lookup Time columns in NDS_Time 3"
           TopLeft="788.999991883125,262.59999780953" />
         <NodeLayout
-          Size="196,42"
+          Size="196,41.6"
           Id="Package\StageAQI to NDS_Time\Stage_AQI_2021"
           TopLeft="67.999997881906,31.6470595163046" />
         <NodeLayout
-          Size="217,42"
+          Size="216.8,41.6"
           Id="Package\StageAQI to NDS_Time\StageAQI2021_to_NDS_Time"
           TopLeft="63.999997881906,403.835291791106" />
         <NodeLayout
-          Size="246,42"
+          Size="246.4,41.6"
           Id="Package\StageAQI to NDS_Time\Lookup Time columns in NDS_Time"
           TopLeft="43.999997945769,273.599997809529" />
         <NodeLayout
-          Size="267,42"
+          Size="267.2,41.6"
           Id="Package\StageAQI to NDS_Time\Derived Column for Time in 2023"
           TopLeft="785.999990048153,151.99999780953" />
         <NodeLayout
-          Size="266,42"
+          Size="265.6,41.6"
           Id="Package\StageAQI to NDS_Time\Derived Column for Time in 2021"
           TopLeft="37.999996110797,156.999997809529" />
         <EdgeLayout
@@ -16882,6 +16892,19 @@ VALUES (?, ?)
         <Name>OverwriteParamsSQLProp</Name>
         <Value
           type="q4:string">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\StageAQI to NDS_Time\Stage_AQI_2023">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="NDSToDDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{32C52B2E-2F3E-492F-BE42-11F9B7E1CC83}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{249ED97A-DAA6-4216-B37C-D0F8FA88CACA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2102,11 +2102,11 @@ where [refTable].[StateID] = ?</property>
           version="1">
           <components>
             <component
-              refId="Package\NDS_Time to Dim_Time\Dim County"
+              refId="Package\NDS_Time to Dim_Time\Dim Time"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Dim County"
+              name="Dim Time"
               usesDispositions="true"
               version="4">
               <properties>
@@ -2159,7 +2159,7 @@ where [refTable].[StateID] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\NDS_Time to Dim_Time\Dim County.Connections[OleDbConnection]"
+                  refId="Package\NDS_Time to Dim_Time\Dim Time.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.AQI_Analysis]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.AQI_Analysis]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2167,83 +2167,83 @@ where [refTable].[StateID] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input]"
+                  refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].Columns[TimeID]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].Columns[TimeID]"
                       cachedDataType="i4"
                       cachedName="TimeID"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[TimeID]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[TimeID]" />
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[TimeID]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[TimeID]" />
                     <inputColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].Columns[Year]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].Columns[Year]"
                       cachedDataType="i4"
                       cachedName="Year"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[Year]" />
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[Year]" />
                     <inputColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].Columns[Quarter]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].Columns[Quarter]"
                       cachedDataType="i4"
                       cachedName="Quarter"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[Quarter]" />
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[Quarter]" />
                     <inputColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].Columns[Month]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].Columns[Month]"
                       cachedDataType="i4"
                       cachedName="Month"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[Month]" />
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[Month]" />
                     <inputColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].Columns[Day]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].Columns[Day]"
                       cachedDataType="i4"
                       cachedName="Day"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[Day]" />
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[Day]" />
                     <inputColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].Columns[DateDate]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].Columns[DateDate]"
                       cachedDataType="dbDate"
                       cachedName="DateDate"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[DateDate]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[DateDate]" />
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[DateDate]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[DateDate]" />
                     <inputColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].Columns[DayLightSaving]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].Columns[DayLightSaving]"
                       cachedDataType="bool"
                       cachedName="DayLightSaving"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[DayLightSaving]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[DayLightSaving]" />
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[DayLightSaving]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[DayLightSaving]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[TimeID]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[TimeID]"
                       dataType="i4"
                       name="TimeID" />
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
                       dataType="i4"
                       name="Year" />
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
                       dataType="i4"
                       name="Quarter" />
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
                       dataType="i4"
                       name="Month" />
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
                       dataType="i4"
                       name="Day" />
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[DateDate]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[DateDate]"
                       dataType="dbDate"
                       name="DateDate" />
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input].ExternalColumns[DayLightSaving]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input].ExternalColumns[DayLightSaving]"
                       dataType="bool"
                       name="DayLightSaving" />
                   </externalMetadataColumns>
@@ -2251,22 +2251,22 @@ where [refTable].[StateID] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\NDS_Time to Dim_Time\Dim County.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\NDS_Time to Dim_Time\Dim Time.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\NDS_Time to Dim_Time\Dim County.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\NDS_Time to Dim_Time\Dim Time.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\Dim County.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\NDS_Time to Dim_Time\Dim Time.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\NDS_Time to Dim_Time\Dim County.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\NDS_Time to Dim_Time\Dim Time.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2331,7 +2331,7 @@ where [refTable].[TimeID] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[TimeID]};</property>
+                  name="ParameterMap">#{Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[TimeID]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2358,7 +2358,7 @@ where [refTable].[TimeID] = ?</property>
                       refId="Package\NDS_Time to Dim_Time\Lookup.Inputs[Lookup Input].Columns[TimeID]"
                       cachedDataType="i4"
                       cachedName="TimeID"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[TimeID]">
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[TimeID]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2516,11 +2516,11 @@ where [refTable].[TimeID] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\NDS_Time to Dim_Time\NDS County"
+              refId="Package\NDS_Time to Dim_Time\NDS Time"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
-              name="NDS County"
+              name="NDS Time"
               usesDispositions="true"
               version="7">
               <properties>
@@ -2565,7 +2565,7 @@ where [refTable].[TimeID] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\NDS_Time to Dim_Time\NDS County.Connections[OleDbConnection]"
+                  refId="Package\NDS_Time to Dim_Time\NDS Time.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.BI_THUCHANH_1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2573,155 +2573,155 @@ where [refTable].[TimeID] = ?</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output]"
+                  refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[TimeID]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[TimeID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[TimeID]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[TimeID]"
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[TimeID]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[TimeID]"
                       name="TimeID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[Year]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[Year]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[Year]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[Year]"
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[Year]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[Year]"
                       name="Year"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[Quarter]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[Quarter]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[Quarter]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[Quarter]"
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[Quarter]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[Quarter]"
                       name="Quarter"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[Month]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[Month]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[Month]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[Month]"
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[Month]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[Month]"
                       name="Month"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[Day]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[Day]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[Day]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[Day]"
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[Day]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[Day]"
                       name="Day"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[DateDate]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[DateDate]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[DateDate]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[DateDate]"
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[DateDate]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[DateDate]"
                       name="DateDate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[DayLightSaving]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[DayLightSaving]"
                       dataType="bool"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[DayLightSaving]"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].Columns[DayLightSaving]"
+                      externalMetadataColumnId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[DayLightSaving]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].Columns[DayLightSaving]"
                       name="DayLightSaving"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[TimeID]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[TimeID]"
                       dataType="i4"
                       name="TimeID" />
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[Year]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[Year]"
                       dataType="i4"
                       name="Year" />
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[Quarter]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[Quarter]"
                       dataType="i4"
                       name="Quarter" />
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[Month]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[Month]"
                       dataType="i4"
                       name="Month" />
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[Day]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[Day]"
                       dataType="i4"
                       name="Day" />
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[DateDate]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[DateDate]"
                       dataType="dbDate"
                       name="DateDate" />
                     <externalMetadataColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output].ExternalColumns[DayLightSaving]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output].ExternalColumns[DayLightSaving]"
                       dataType="bool"
                       name="DayLightSaving" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output]"
+                  refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[TimeID]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[TimeID]"
                       dataType="i4"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[TimeID]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[TimeID]"
                       name="TimeID" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[Year]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[Year]"
                       dataType="i4"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[Year]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[Year]"
                       name="Year" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[Quarter]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[Quarter]"
                       dataType="i4"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[Quarter]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[Quarter]"
                       name="Quarter" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[Month]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[Month]"
                       dataType="i4"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[Month]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[Month]"
                       name="Month" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[Day]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[Day]"
                       dataType="i4"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[Day]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[Day]"
                       name="Day" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[DateDate]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[DateDate]"
                       dataType="dbDate"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[DateDate]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[DateDate]"
                       name="DateDate" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[DayLightSaving]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[DayLightSaving]"
                       dataType="bool"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[DayLightSaving]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[DayLightSaving]"
                       name="DayLightSaving" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2733,14 +2733,14 @@ where [refTable].[TimeID] = ?</property>
           <paths>
             <path
               refId="Package\NDS_Time to Dim_Time.Paths[Lookup No Match Output]"
-              endId="Package\NDS_Time to Dim_Time\Dim County.Inputs[OLE DB Destination Input]"
+              endId="Package\NDS_Time to Dim_Time\Dim Time.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\NDS_Time to Dim_Time\Lookup.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\NDS_Time to Dim_Time.Paths[OLE DB Source Output]"
               endId="Package\NDS_Time to Dim_Time\Lookup.Inputs[Lookup Input]"
               name="OLE DB Source Output"
-              startId="Package\NDS_Time to Dim_Time\NDS County.Outputs[OLE DB Source Output]" />
+              startId="Package\NDS_Time to Dim_Time\NDS Time.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2875,15 +2875,15 @@ where [refTable].[TimeID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="121,42"
+          Size="120.8,41.6"
           Id="Package\NDS_AQI to Fact_AQI\NDS AQI"
           TopLeft="155,60" />
         <NodeLayout
-          Size="120,42"
+          Size="120,41.6"
           Id="Package\NDS_AQI to Fact_AQI\Fact AQI"
           TopLeft="60,362" />
         <NodeLayout
-          Size="113,42"
+          Size="112.8,41.6"
           Id="Package\NDS_AQI to Fact_AQI\Lookup"
           TopLeft="146,198" />
         <EdgeLayout
@@ -3296,86 +3296,84 @@ where [refTable].[TimeID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="113,42"
+          Size="112.8,41.6"
           Id="Package\NDS_Time to Dim_Time\Lookup"
           TopLeft="146,198" />
         <NodeLayout
-          Size="134,42"
-          Id="Package\NDS_Time to Dim_Time\Dim County"
+          Size="124,41.6"
+          Id="Package\NDS_Time to Dim_Time\Dim Time"
           TopLeft="60,362" />
         <NodeLayout
-          Size="136,42"
-          Id="Package\NDS_Time to Dim_Time\NDS County"
+          Size="125.6,41.6"
+          Id="Package\NDS_Time to Dim_Time\NDS Time"
           TopLeft="155,60" />
         <EdgeLayout
           Id="Package\NDS_Time to Dim_Time.Paths[OLE DB Source Output]"
-          TopLeft="223,102">
+          TopLeft="217.8,101.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-20.5,96"
+              EndConnector="-15.4,96.4"
               Start="0,0"
-              End="-20.5,88.5">
+              End="-15.4,88.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44" />
+                    End="0,44.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,44"
-                    Point2="0,48"
-                    Point3="-4,48" />
+                    Point1="0,44.2"
+                    Point2="0,48.2"
+                    Point3="-4,48.2" />
                   <mssgle:LineSegment
-                    End="-16.5,48" />
+                    End="-11.4,48.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="-16.5,48"
-                    Point2="-20.5,48"
-                    Point3="-20.5,52" />
+                    Point1="-11.4,48.2"
+                    Point2="-15.4,48.2"
+                    Point3="-15.4,52.2" />
                   <mssgle:LineSegment
-                    End="-20.5,88.5" />
+                    End="-15.4,88.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\NDS_Time to Dim_Time.Paths[Lookup No Match Output]"
-          TopLeft="202.5,240">
+          TopLeft="202.4,239.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-75.5,122"
+              EndConnector="-80.4,122.4"
               Start="0,0"
-              End="-75.5,114.5">
+              End="-80.4,114.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,57" />
+                    End="0,57.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,57"
-                    Point2="0,61"
-                    Point3="-4,61" />
+                    Point1="0,57.2"
+                    Point2="0,61.2"
+                    Point3="-4,61.2" />
                   <mssgle:LineSegment
-                    End="-71.5,61" />
+                    End="-76.4,61.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="-71.5,61"
-                    Point2="-75.5,61"
-                    Point3="-75.5,65" />
+                    Point1="-76.4,61.2"
+                    Point2="-80.4,61.2"
+                    Point3="-80.4,65.2" />
                   <mssgle:LineSegment
-                    End="-75.5,114.5" />
+                    End="-80.4,114.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-93.55638671875,66,111.6127734375,11.609375"
+              BoundingBox="-96.00638671875,66.2,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3406,7 +3404,7 @@ where [refTable].[TimeID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\NDS_Time to Dim_Time\Dim County">
+    design-time-name="Package\NDS_Time to Dim_Time\Dim Time">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3419,7 +3417,7 @@ where [refTable].[TimeID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\NDS_Time to Dim_Time\NDS County">
+    design-time-name="Package\NDS_Time to Dim_Time\NDS Time">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

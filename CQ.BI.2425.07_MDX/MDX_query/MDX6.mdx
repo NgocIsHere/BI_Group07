@@ -1,0 +1,26 @@
+/* Design a report to demonstrate the AQI fluctuation trends over the year for the four
+following states: Hawaii, Alaska, Illinois and California. Analysis hint: Give your
+opinion about the fluctuations of AQI value.*/
+
+
+WITH 
+MEMBER [Measures].[Avg AQI] AS
+	--AVG([Fact AQI].[AQI ID].Members, [Measures].[AQI Value])
+    [Measures].[AQI Value] / [Measures].[Fact AQI Count]
+
+SELECT 
+    NON EMPTY { [Measures].[Avg AQI] } ON COLUMNS,
+    NON EMPTY 
+    CROSSJOIN(
+		[Dim County].[State ID].[State ID].MEMBERS,
+        [Dim Time].[year].[year].MEMBERS, 
+		[Dim Time].[Quarter].[Quarter].MEMBERS
+
+    ) ON ROWS
+FROM [AQI Analysis 1]
+WHERE (
+    {[Dim County].[State Name].&[Hawaii], 
+     [Dim County].[State Name].&[Alaska],
+     [Dim County].[State Name].&[Illinois],
+     [Dim County].[State Name].&[California]}
+)

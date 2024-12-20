@@ -1,0 +1,31 @@
+/*2. Report the mean and the standard deviation of AQI value for each State during
+each quarter of years. Analysis hints: How do the AQI values fluctuate during the
+year? Pay attention to the values (mean, std, max, min). Are any unusually large or
+small?*/
+
+WITH 
+-- Calculate Mean of AQI Value
+MEMBER [Measures].[AQI Mean] AS 
+    AVG([Fact AQI].[AQI ID].Members, [Measures].[AQI Value])
+
+-- Calculate Standard Deviation of AQI Value
+MEMBER [Measures].[AQI StdDev] AS 
+    STDEV([Fact AQI].[AQI ID].Members, [Measures].[AQI Value])
+
+-- Calculate Min and Max for additional comparison
+MEMBER [Measures].[AQI Min] AS 
+    MIN([Fact AQI].[AQI ID].Members, [Measures].[AQI Value])
+
+MEMBER [Measures].[AQI Max] AS 
+    MAX([Fact AQI].[AQI ID].Members, [Measures].[AQI Value])
+
+SELECT 
+    { [Measures].[AQI Mean], 
+      [Measures].[AQI StdDev],
+      [Measures].[AQI Min],
+      [Measures].[AQI Max] } ON COLUMNS,
+    NON EMPTY CROSSJOIN(
+        [Dim County].[State Name].Members, 
+        [Dim Time].[Quarter].Members
+    ) ON ROWS
+FROM [AQI Analysis 1]

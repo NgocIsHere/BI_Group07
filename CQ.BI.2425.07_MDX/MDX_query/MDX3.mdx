@@ -1,0 +1,40 @@
+/*Report the number of days, and the mean AQI value where the air quality is rated
+as "very unhealthy" or worse for each State and County. Analysis hint: What is the
+AQI limit above which air quality is "very unhealthy" or worse?*/
+
+
+WITH 
+    MEMBER [Measures].[VeryUnhealthyDays] AS
+        SUM(
+            FILTER(
+                [Dim Time].[Date Date].[Date Date].MEMBERS,
+                [Measures].[AQI Value] >= 201
+            ),
+            [Measures].[Fact AQI Count]
+        )
+
+    MEMBER [Measures].[MeanVeryUnhealthyAQI] AS
+        IIF(
+            [Measures].[VeryUnhealthyDays] > 0,
+            SUM(
+                FILTER(
+                    [Dim Time].[Date Date].[Date Date].MEMBERS,
+                    [Measures].[AQI Value] >= 201
+                ),
+                [Measures].[AQI Value]
+            ) / [Measures].[VeryUnhealthyDays],
+            NULL
+        )
+
+SELECT 
+    {
+        [Measures].[VeryUnhealthyDays], 
+        [Measures].[MeanVeryUnhealthyAQI]
+    } ON COLUMNS,
+    NON EMPTY 
+        CROSSJOIN(
+            [Dim County].[State Name].[State Name].MEMBERS,
+            [Dim County].[County Name].[County Name].MEMBERS
+        ) ON ROWS
+FROM [AQI Analysis 1]
+WHERE ([Dim Time].[Date Date].MEMBERS)

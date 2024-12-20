@@ -1,0 +1,23 @@
+/*Report the min and max of AQI value for each State during each quarter of
+years. Analysis hints: How do the AQI values fluctuate during the year? Pay
+attention to the values ( max, min). Are any unusually large or small?*/
+
+WITH 
+-- Tính Min cua AQI Value
+MEMBER [Measures].[AQI Min] AS 
+    MIN([Fact AQI].[AQI ID].Members, [Measures].[AQI Value])
+
+-- Tính Max cua AQI Value
+MEMBER [Measures].[AQI Max] AS 
+    MAX([Fact AQI].[AQI ID].Members, [Measures].[AQI Value])
+
+SELECT 
+    { [Measures].[AQI Min], 
+	  [Measures].[AQI Max]
+	} ON COLUMNS,
+    NON EMPTY CROSSJOIN(
+        [Dim County].[State Name].[State Name].MEMBERS,
+        [Dim Time].[Year].[Year].MEMBERS,
+        [Dim Time].[Quarter].[Quarter].MEMBERS
+    ) ON ROWS
+FROM [AQI Analysis 1]

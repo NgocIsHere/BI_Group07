@@ -1,0 +1,31 @@
+/*
+For the four following states: Hawaii, Alaska, Illinois and Delaware, compute the
+mean AQI value by quarters. Analysis hints: Comparing the data of the states
+over the year. What could you conclude about the fluctuations?
+*/
+WITH 
+    MEMBER [Measures].[MeanAQI] AS 
+       --AVG([Fact AQI].[AQI ID].Members, [Measures].[AQI Value])
+	   [Measures].[AQI Value] / [Measures].[Fact AQI Count]
+
+
+SELECT 
+    { [Measures].[MeanAQI] } ON COLUMNS,
+    NON EMPTY 
+        CROSSJOIN(
+            [Dim County].[State ID].[State ID].MEMBERS,
+			[Dim Time].[Year].[Year].MEMBERS,
+
+            [Dim Time].[Quarter].[Quarter].MEMBERS
+        ) ON ROWS
+FROM [AQI Analysis 1]
+WHERE (
+    {[Dim County].[State Name].&[Hawaii], 
+     [Dim County].[State Name].&[Alaska],
+     [Dim County].[State Name].&[Illinois],
+     [Dim County].[State Name].&[Delaware]}
+)
+
+
+
+
