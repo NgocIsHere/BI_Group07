@@ -1,0 +1,84 @@
+﻿/*
+For the four following states: Hawaii, Alaska, Illinois and Delaware, count the
+number of days in each air quality Category (Good, Moderate,etc.) by County.
+Analysis hints: Comparing the data of the states and counties, focus on the
+distribution of the harmful air condition. What could you conclude about the
+differences?)
+*/
+
+WITH 
+    MEMBER [Measures].[GoodDays] AS 
+        SUM(
+            FILTER(
+                [Dim Time].[Date Date].[Date Date].MEMBERS,
+                [Measures].[AQI Value] >= 0 AND [Measures].[AQI Value] <= 50
+            ),
+            [Measures].[Fact AQI Count]
+        )
+
+    MEMBER [Measures].[ModerateDays] AS 
+        SUM(
+            FILTER(
+                [Dim Time].[Date Date].[Date Date].MEMBERS,
+                [Measures].[AQI Value] >= 51 AND [Measures].[AQI Value] <= 100
+            ),
+            [Measures].[Fact AQI Count]
+        )
+
+    MEMBER [Measures].[UnhealthySensitiveDays] AS 
+        SUM(
+            FILTER(
+                [Dim Time].[Date Date].[Date Date].MEMBERS,
+                [Measures].[AQI Value] >= 101 AND [Measures].[AQI Value] <= 150
+            ),
+            [Measures].[Fact AQI Count]
+        )
+
+    MEMBER [Measures].[UnhealthyDays] AS 
+        SUM(
+            FILTER(
+                [Dim Time].[Date Date].[Date Date].MEMBERS,
+                [Measures].[AQI Value] >= 151 AND [Measures].[AQI Value] <= 200
+            ),
+            [Measures].[Fact AQI Count]
+        )
+
+    MEMBER [Measures].[VeryUnhealthyDays] AS 
+        SUM(
+            FILTER(
+                [Dim Time].[Date Date].[Date Date].MEMBERS,
+                [Measures].[AQI Value] >= 201 AND [Measures].[AQI Value] <= 300
+            ),
+            [Measures].[Fact AQI Count]
+        )
+
+    MEMBER [Measures].[HazardousDays] AS 
+        SUM(
+            FILTER(
+                [Dim Time].[Date Date].[Date Date].MEMBERS,
+                [Measures].[AQI Value] >= 301
+            ),
+            [Measures].[Fact AQI Count]
+        )
+
+SELECT 
+    {
+        [Measures].[GoodDays],
+        [Measures].[ModerateDays],
+        [Measures].[UnhealthySensitiveDays],
+        [Measures].[UnhealthyDays],
+        [Measures].[VeryUnhealthyDays],
+        [Measures].[HazardousDays]
+    } ON COLUMNS,
+    NON EMPTY 
+		CROSSJOIN(
+		[Dim County].[State ID].[State ID].MEMBERS, 
+        [Dim County].[County Name].[County Name].MEMBERS 
+		)ON ROWS
+FROM [AQI Analysis 1]
+WHERE (
+    {[Dim County].[State Name].&[Hawaii], 
+     [Dim County].[State Name].&[Alaska],
+     [Dim County].[State Name].&[Illinois],
+     [Dim County].[State Name].&[Delaware]}
+)

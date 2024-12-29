@@ -1,0 +1,227 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="55467e62-17e2-4c9a-a9d0-d94437824be1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>AQI Analysis</ID>
+  <Name>AQI Analysis</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="a928c545-0519-4741-b8b2-59eabc16a20e">
+      <ID>Fact AQI</ID>
+      <Name>Fact AQI</Name>
+      <DimensionID>Fact AQI</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="bfeebfd7-63aa-495a-90fd-ed7d4128e78f">
+          <AttributeID>AQI ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2a5cf98f-2a5d-45c1-934b-7507b8b91a55">
+          <AttributeID>Time ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b00de76b-cd72-4d53-b174-1e82d635a49b">
+          <AttributeID>County ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="905a98f2-074c-4f80-8363-9db49e1d0b16">
+      <ID>Dim Time</ID>
+      <Name>Dim Time</Name>
+      <DimensionID>Dim Time</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="eb1ca5ee-e208-46e6-99e2-c471e6945963">
+          <AttributeID>Time ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5d29b167-1d24-4f2d-9c2b-3c9fd200d957">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e5633329-1bb0-428a-9f4c-f5119ab197b7">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7a513333-68ed-40cc-b108-97d4d9c0bf55">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="adbf37f0-ba80-49c3-8720-89a847fefd92">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1f8bc9d7-554b-4963-ba30-fe8bfa02fc34">
+          <AttributeID>Date Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d066eb82-97f6-403d-9316-1aa8f9ac8bbd">
+      <ID>Dim County</ID>
+      <Name>Dim County</Name>
+      <DimensionID>Dim County</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8daed952-376c-477f-858d-52cc7fc14017">
+          <AttributeID>County ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fa1ac5fc-2863-46cd-986c-280819b22de9">
+          <AttributeID>County Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="28dd1830-f96e-4749-a197-b93c6f4913f2">
+          <AttributeID>County Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="958e1eed-b141-4f8a-bb74-a32d5796eaa9">
+          <AttributeID>County Full</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ce378be3-ee34-4885-bde5-02892efe46f9">
+          <AttributeID>County Fips</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6abfa1e8-cc85-4a94-97a8-3151a7a93a5d">
+          <AttributeID>Lat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a9f20fd3-7a95-4020-8c38-38df2eb32752">
+          <AttributeID>Long</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e7ba0ff5-99de-4449-9328-d183119e90a1">
+          <AttributeID>Population</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="261e1917-a0b4-42d9-a0b7-2414247ec2f6">
+          <AttributeID>State ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2a04b736-5d66-4c04-877c-3c8140c67a16">
+          <AttributeID>State Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="70260aa3-66c6-42e6-ade9-194fd1086594">
+          <AttributeID>State Code</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="3b9c1126-f252-4172-a4a5-6baa7536bdd4">
+      <ID>Fact AQI</ID>
+      <Name>Fact AQI</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="7b862d76-69cf-41f9-8e16-7dfe523cf1c2">
+          <ID>AQI Value</ID>
+          <Name>AQI Value</Name>
+          <Source dwd:design-time-name="74f45a4c-8857-4ca9-b5aa-c66cf92c0e2a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d720b795-3ee8-4343-9da9-ae8d13288d2d">
+              <TableID>dbo_Fact_AQI</TableID>
+              <ColumnID>AQI_Value</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="289c0e75-13cf-43d8-8de4-136d6ae5acb0">
+          <ID>Fact AQI Count</ID>
+          <Name>Fact AQI Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="1a11d1ad-7a9c-4906-8168-ea9d442a3a57">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="330760fe-72a2-4687-8118-fa8dec9ca102">
+              <TableID>dbo_Fact_AQI</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="f72622a6-3b69-461f-b872-3a321e642355">
+          <CubeDimensionID>Fact AQI</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a456e144-4aba-4709-9d58-50ba62077fbb">
+              <AttributeID>AQI ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="33629d42-d8a8-44ed-9a92-86e64ea4fcc5">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="34efcc84-b335-478a-bd16-e64c37175f3b">
+                    <TableID>dbo_Fact_AQI</TableID>
+                    <ColumnID>AQI_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c669019c-7ad6-44f8-a982-891b0c8d7c5f">
+          <CubeDimensionID>Dim Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="392ce336-0938-4787-b549-ed697bd84f01">
+              <AttributeID>Time ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="57f866bb-725f-418d-b43d-7b7aa4a9ffa5">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="933d23f8-8b9a-4af0-9f26-00ac1f37836a">
+                    <TableID>dbo_Fact_AQI</TableID>
+                    <ColumnID>TimeID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a6b81014-7413-453c-8fef-108501569ea2">
+          <CubeDimensionID>Dim County</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="72d7bded-bd9c-41a5-b8f1-48915bdf90e3">
+              <AttributeID>County ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="05d670c0-4df0-4db3-bc87-e051704ce0ca">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e983c7a3-88ed-4885-b8cc-1ae4cc283972">
+                    <TableID>dbo_Fact_AQI</TableID>
+                    <ColumnID>CountyID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="3514f951-3c2c-41b4-97d5-c179477a8744">
+    <DataSourceViewID>AQI Analysis</DataSourceViewID>
+  </Source>
+</Cube>

@@ -1,14 +1,16 @@
-/*Report the min and max of AQI value for each State during each quarter of
+��/*Report the min and max of AQI value for each State during each quarter of
 years. Analysis hints: How do the AQI values fluctuate during the year? Pay
-attention to the values ( max, min). Are any unusually large or small?*/
+attention to the values max, min). Are any unusually large or small?*/
 
 WITH 
 MEMBER [Measures].[AQI Min] AS 
-    MIN([Fact AQI].[AQI ID].Members, [Measures].[AQI Value])
+    MIN([Fact AQI 1].[AQI_ID].Members, [Measures].[AQI Value])
 
-MEMBER [Measures].[AQI Max] AS 
-    MAX([Fact AQI].[AQI ID].Members, [Measures].[AQI Value])
-
+MEMBER [Measures].[AQI Max] AS
+        MAX(
+            [Fact AQI 1].[AQI_ID].[AQI_ID].MEMBERS, 
+            [Measures].[AQI Value]
+        )
 SELECT 
     { [Measures].[AQI Min], 
 	  [Measures].[AQI Max]
